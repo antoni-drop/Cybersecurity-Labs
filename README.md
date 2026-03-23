@@ -1,10 +1,10 @@
 # 🛡️ Cybersecurity Labs & Portfolio
 
-Welcome to my cybersecurity learning journey! This repository showcases my hands-on experience, projects, and labs as I build expertise in various cybersecurity domains.
+Welcome to my cybersecurity learning journey! This repository showcases my transition to the industry, CTF write-ups (and my struggle doing them), working through the SOC L1 analyst path and the Security 101 path (both on THM), certificates, study notes, side projects and more! I am currently working towards getting my first certificate (Security +)
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Antoni Drop**, a dedicated cybersecurity enthusiast and learner committed to developing practical skills in information security. This portfolio documents my learning path, from foundational concepts to advanced practical applications.
+Hi! I'm **Antoni Drop**, I'm a 
 
 - 🎯 **Mission**: Build a strong foundation in cybersecurity through practical, hands-on experience
 - 📚 **Learning Focus**: Network Security, Cryptography, Web Security, Ethical Hacking, and Incident Response
