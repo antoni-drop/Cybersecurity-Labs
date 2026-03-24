@@ -10,8 +10,6 @@ Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environme
 
 - Certifications: Working toward CompTIA Security+.
 
-## Current Progress ✅
-
 ## 🏆 TryHackMe Profile
 
 [![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/ToniDee.png)](https://tryhackme.com/p/ToniDee)
