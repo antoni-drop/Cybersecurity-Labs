@@ -159,8 +159,7 @@ While this is primarily a personal learning portfolio, I welcome:
 ## 📞 Get in Touch
 
 - **GitHub**: [@antoni-drop](https://github.com/antoni-drop)
-- **Portfolio Website**: [Coming Soon]
-- **Email**: [Your Email]
+- **Email**: dropantoni@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile]
 
 ## 📜 License
