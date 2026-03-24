@@ -18,10 +18,6 @@ Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environme
 
 Check out my TryHackMe profile to see my progress and completed rooms.
 
-- 🎯 **Mission**: Build a strong foundation in cybersecurity through practical, hands-on experience
-- 📚 **Learning Focus**: Network Security, Cryptography, Web Security, Ethical Hacking, and Incident Response
-- 🔧 **Approach**: Learning by doing - each lab and project includes real-world scenarios and problem-solving
-
 ## 📂 Repository Structure
 
 This repository is organized into several key sections:
