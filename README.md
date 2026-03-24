@@ -1,10 +1,22 @@
 # 🛡️ Cybersecurity Labs & Portfolio
 
-Welcome to my cybersecurity learning journey! This repository showcases my transition to the industry, CTF write-ups (and my struggle doing them), working through the SOC L1 analyst path and the Security 101 path (both on THM), certificates, study notes, side projects and more! I am currently working towards getting my first certificate (Security +)
+Welcome to my cybersecurity learning journey! This repository showcases my transition into the industry, CTF write-ups (and my struggle behind them), working through the SOC L1 analyst path and the Security 101 path (both on THM), certificates, study notes, and python automation projects. I am currently working towards getting my first certificate (Security +)
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Antoni Drop**, I'm a 
+Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environments and the discipline of a former Personal Trainer, I am now applying my work ethic to the world of Digital Defense.
+
+- Current Focus: SOC Level 1, Security 101 and Python for Security.
+
+- Certifications: Working toward CompTIA Security+.
+
+## Current Progress ✅
+
+## 🏆 TryHackMe Profile
+
+[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/ToniDee.png)](https://tryhackme.com/p/ToniDee)
+
+Check out my TryHackMe profile to see my progress and completed rooms.
 
 - 🎯 **Mission**: Build a strong foundation in cybersecurity through practical, hands-on experience
 - 📚 **Learning Focus**: Network Security, Cryptography, Web Security, Ethical Hacking, and Incident Response
