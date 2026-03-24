@@ -1,12 +1,12 @@
 # 🛡️ Cybersecurity Labs & Portfolio
 
-Welcome to my cybersecurity learning journey! This repository showcases my transition into the industry, CTF write-ups (and my struggle behind them), working through the SOC L1 analyst path and the Security 101 path (both on THM), certificates, study notes, and python automation projects. I am currently working towards getting my first certificate (Security +)
+Welcome to my cybersecurity learning journey! This repository showcases my transition into the industry, CTF write-ups (and my struggle behind them), working through learning pathways on THM, certificates, study notes, and python automation projects. I am currently working towards getting my first certificate (Security +)
 
 ## 👨‍💻 About Me
 
 Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environments and the discipline of a former Personal Trainer, I am now applying my work ethic to the world of Digital Defense.
 
-- Current Focus: SOC Level 1, Security 101 and Python for Security.
+- Current Focus: SOC Level 1, Security 101 (THM)
 
 - Certifications: Working toward CompTIA Security+.
 
