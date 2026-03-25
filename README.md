@@ -1,6 +1,6 @@
 # 🛡️ Cybersecurity Labs & Portfolio
 
-Welcome to my cybersecurity learning journey! This repository showcases my transition into the industry, CTF write-ups (and my struggle behind them), working through learning pathways on THM, certificates, study notes, and python automation projects. I am currently working towards getting my first certificate (Security +)
+# Welcome to my cybersecurity learning journey! This repository showcases my transition into the industry, CTF write-ups (and my struggle behind them), working through learning pathways on THM, certificates, study notes, and python automation projects. I am currently working towards getting my first certificate (Security +)
 
 ## 👨‍💻 About Me
 
