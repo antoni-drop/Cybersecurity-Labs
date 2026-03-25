@@ -42,7 +42,7 @@ Each lab includes:
 - 💡 Key learnings and insights
 - 🔍 Challenges encountered and solutions
 
-### 🚀 [Projects] (./Projects.md)
+### 🚀 [Projects](./Projects.md)
 End-to-end cybersecurity projects demonstrating integrated knowledge:
 - Complete project documentation
 - Architecture and design decisions
