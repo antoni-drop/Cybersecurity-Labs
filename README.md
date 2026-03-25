@@ -20,7 +20,7 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 
 This repository is organized into several key sections:
 
-### 🔬 **Labs** (`/labs`)
+### [🔬 Labs](./labs)
 Structured learning exercises and hands-on labs organized by topic:
 - **Network Security**: Network protocols, firewalls, intrusion detection, VPNs
 - **Cryptography**: Encryption algorithms, hashing, digital signatures, PKI
