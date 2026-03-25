@@ -16,6 +16,13 @@ Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environme
 
 Check out my TryHackMe profile to see my progress and completed rooms.
 
+## 🗺️ Portfolio Navigation
+
+* 🔬 **[Technical Labs](./labs/README.md)** - Hands-on security exercises.
+* 🚀 **[Projects](./projects/README.md)** - Custom scripts and automation.
+* 📚 **[Resources](./resources/README.md)** - Study notes and documentation.
+* 🏅 **[Certifications](./certs/README.md)** - Professional validation.
+
 ## 📂 Repository Structure
 
 This repository is organized into several key sections:
