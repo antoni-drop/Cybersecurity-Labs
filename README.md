@@ -18,8 +18,8 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 
 ## 🗺️ Portfolio Navigation
 
-* 🔬 **[Technical Labs](./Labs.md)** - Hands-on security exercises.
-* 🚀 **[Projects](./Projects)** - Custom scripts and automation.
+* 🔬 **[Technical Labs](./Labs/README.md)** - Hands-on security exercises.
+* 🚀 **[Projects](./Projects/README.md)** - Custom scripts and automation.
 * 📚 **[Resources](./resources/README.md)** - Study notes and documentation.
 * 🏅 **[Certifications](./certs/README.md)** - Professional validation.
 
