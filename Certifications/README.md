@@ -4,7 +4,7 @@
 
 ### 🏆 Verified Certificates
 
-![Pre-Security](/Certifications/THM-pre-security-certificate.png)
+![THM-pre-security-certificate](https://github.com/user-attachments/assets/4b3f8ca1-3b45-4928-b63e-5aaa9e8bb931)
 
 
 
