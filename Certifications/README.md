@@ -4,8 +4,8 @@
 
 ### 🏆 Verified Certificates
 
-![Pre-Security Completion Certificate](/THM-pre-security-certificate.pdf)
-<img src=/THM-pre-security-certificate.pdf width="600" alt=Pre-Security Certificate>
+![Pre-Security Completion Certificate](/THM-pre-security-certificate.png)
+<img src=/THM-pre-security-certificate.png width="600" alt=Pre-Security Certificate>
 
 
 
