@@ -29,7 +29,7 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 
 This repository is organized into several key sections:
 
-### [🔬 Labs](./Labs.md)
+### [🔬 Labs](./Labs/README.md)
 Structured learning exercises and hands-on labs organized by topic:
 - **Network Security**: Network protocols, firewalls, intrusion detection, VPNs
 - **Cryptography**: Encryption algorithms, hashing, digital signatures, PKI
@@ -44,7 +44,7 @@ Each lab includes:
 - 💡 Key learnings and insights
 - 🔍 Challenges encountered and solutions
 
-### 🚀 [Projects](./Projects.md)
+### 🚀 [Projects](./Projects/README.md)
 End-to-end cybersecurity projects demonstrating integrated knowledge:
 - Complete project documentation
 - Architecture and design decisions
@@ -52,14 +52,14 @@ End-to-end cybersecurity projects demonstrating integrated knowledge:
 - Testing and results
 - Real-world applications
 
-### 🎓 [Certifications](./Certifications)
+### 🎓 [Certifications](./Certifications/README.md)
 Tracking of cybersecurity certifications and credentials:
 - Pursued certifications
 - Completion dates
 - Verification links
 - Relevant skills gained
 
-### 📚 [Resources](./Resources)
+### 📚 [Resources](./Resources/README.md)
 Curated collection of learning materials:
 - Online courses and tutorials
 - Books and whitepapers
