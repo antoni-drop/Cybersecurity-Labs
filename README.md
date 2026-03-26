@@ -12,7 +12,9 @@ Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environme
 
 ## 🏆 TryHackMe Profile
 
-[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/ToniDee.png)](https://tryhackme.com/p/ToniDee)
+<a href="https://tryhackme.com/p/ToniDee">
+  <img src="https://img.shields.io/badge/TryHackMe-ToniDee-212c42?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe Profile">
+</a>
 
 Check out my TryHackMe profile to see my progress and completed rooms.
 
