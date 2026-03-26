@@ -8,7 +8,7 @@ Hi! I'm **Antoni Drop**, With a background in high-pressure healthcare environme
 
 - Current Focus: SOC Level 1, Security 101 (THM)
 
-- Certifications: Working toward CompTIA Security+.
+- Certifications: Working toward CompTIA Security+
 
 ## 🏆 TryHackMe Profile
 
