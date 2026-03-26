@@ -50,7 +50,7 @@ End-to-end cybersecurity projects demonstrating integrated knowledge:
 - Testing and results
 - Real-world applications
 
-### 🎓 [Certifications](./certifications)
+### 🎓 [Certifications](./Certifications)
 Tracking of cybersecurity certifications and credentials:
 - Pursued certifications
 - Completion dates
