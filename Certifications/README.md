@@ -7,7 +7,7 @@
 
 <img src="./my-cert.png" width="500" alt="Pre-Security Certificate">
 
-Note: My account name here appears to be my actual name for the certificate, to clarify, I changed my name to **ToniDee** shortly after this.
+Note: My account name here appears to be my actual name for the certificate, to clarify, I changed my name to **ToniDee** on THM shortly after this.
 
 
 
