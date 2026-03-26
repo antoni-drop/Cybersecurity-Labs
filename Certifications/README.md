@@ -4,6 +4,7 @@
 
 ### 🏆 Verified Certificates
 
+![Pre-Security Completion Certificate](./pre-security-cert.png)
 
 
 
