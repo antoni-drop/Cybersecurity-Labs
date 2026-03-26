@@ -8,7 +8,7 @@
 
 
 
-![Certificate](./THM-pre-security-certificate.png)
+![Certificate](/THM-pre-security-certificate.png)
 
 
 
