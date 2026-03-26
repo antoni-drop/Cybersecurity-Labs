@@ -20,8 +20,8 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 
 * 🔬 **[Technical Labs](./Labs/README.md)** - Hands-on security exercises.
 * 🚀 **[Projects](./Projects/README.md)** - Custom scripts and automation.
-* 📚 **[Resources](./resources/README.md)** - Study notes and documentation.
-* 🏅 **[Certifications](./certs/README.md)** - Professional validation.
+* 📚 **[Resources](./Resources/README.md)** - Study notes and documentation.
+* 🏅 **[Certifications](./Certificates/README.md)** - Professional validation.
 
 ## 📂 Repository Structure
 
