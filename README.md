@@ -33,8 +33,6 @@ This repository is organized into several key sections:
 Structured learning exercises and hands-on labs organized by topic
 
 
-
-
 ### 🚀 [Projects](./Projects/README.md)
 End-to-end cybersecurity projects demonstrating integrated knowledge
 
@@ -46,10 +44,6 @@ Tracking of cybersecurity certifications and credentials
 ### 📚 [Resources](./Resources/README.md)
 Curated collection of learning materials
 
-
-## 🛠️ Tools & Technologies
-
-### Security Tools
 
 ## 🧪 Current Laboratory Focus
 
@@ -92,8 +86,7 @@ While this is primarily a personal learning portfolio, I welcome:
 
 - **GitHub**: [@antoni-drop](https://github.com/antoni-drop)
 - **Email**: dropantoni@gmail.com
-- **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/antoni-drop-9195bb3ba/]
----
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antoni-drop-9195bb3ba/)
 
 **Last Updated**: 2026-03-23 20:09:07  
 **Status**: 🟨 Active Learning | 📈 Expanding Labs and Projects
