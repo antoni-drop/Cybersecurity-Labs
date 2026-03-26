@@ -21,7 +21,7 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 * 🔬 **[Technical Labs](./Labs/README.md)** - Hands-on security exercises.
 * 🚀 **[Projects](./Projects/README.md)** - Custom scripts and automation.
 * 📚 **[Resources](./Resources/README.md)** - Study notes and documentation.
-* 🏅 **[Certifications](./Certificates/README.md)** - Professional validation.
+* 🏅 **[Certifications](./Certifications/README.md)** - Professional validation.
 
 ## 📂 Repository Structure
 
@@ -50,14 +50,14 @@ End-to-end cybersecurity projects demonstrating integrated knowledge:
 - Testing and results
 - Real-world applications
 
-### 🎓 **Certifications** (`/certifications`)
+### 🎓 [Certifications] (./certifications)
 Tracking of cybersecurity certifications and credentials:
 - Pursued certifications
 - Completion dates
 - Verification links
 - Relevant skills gained
 
-### 📚 **Resources** (`/resources`)
+### 📚 [Resources] (./Resources)
 Curated collection of learning materials:
 - Online courses and tutorials
 - Books and whitepapers
