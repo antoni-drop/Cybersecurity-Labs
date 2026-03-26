@@ -31,53 +31,26 @@ This repository is organized into several key sections:
 
 ### [🔬 Labs](./Labs/README.md)
 Structured learning exercises and hands-on labs organized by topic:
-- **Network Security**: Network protocols, firewalls, intrusion detection, VPNs
-- **Cryptography**: Encryption algorithms, hashing, digital signatures, PKI
-- **Web Security**: OWASP top 10, XSS, SQL injection, CSRF, secure coding
-- **Ethical Hacking**: Penetration testing, vulnerability assessment, exploitation techniques
-- **Incident Response**: Threat analysis, forensics, containment, recovery procedures
+
 
 Each lab includes:
-- 📝 Detailed problem statement and objectives
-- 🛠️ Tools and technologies used
-- 📖 Step-by-step documentation
-- 💡 Key learnings and insights
-- 🔍 Challenges encountered and solutions
+
 
 ### 🚀 [Projects](./Projects/README.md)
 End-to-end cybersecurity projects demonstrating integrated knowledge:
-- Complete project documentation
-- Architecture and design decisions
-- Code implementations
-- Testing and results
-- Real-world applications
+
 
 ### 🎓 [Certifications](./Certifications/README.md)
 Tracking of cybersecurity certifications and credentials:
-- Pursued certifications
-- Completion dates
-- Verification links
-- Relevant skills gained
+
 
 ### 📚 [Resources](./Resources/README.md)
 Curated collection of learning materials:
-- Online courses and tutorials
-- Books and whitepapers
-- Tools and software
-- Community forums and blogs
-- Practice platforms
+
 
 ## 🛠️ Tools & Technologies
 
 ### Security Tools
-- Wireshark - Network protocol analysis
-- Metasploit - Penetration testing framework
-- Burp Suite - Web security testing
-- Nmap - Network scanning and reconnaissance
-- Hashcat - Password cracking and hashing
-- Snort/Zeek - Network intrusion detection
-
-## 📊 Learning Progress
 
 ## 🧪 Current Laboratory Focus
 
