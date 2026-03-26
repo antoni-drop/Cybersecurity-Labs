@@ -4,7 +4,7 @@
 
 ### 🏆 Verified Certificates
 
-![Pre-Security](Certifications/README.md/THM-pre-security-certificate.png)
+![Pre-Security](./Certifications/THM-pre-security-certificate.png)
 
 
 
