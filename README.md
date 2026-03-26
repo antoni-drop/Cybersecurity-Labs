@@ -77,66 +77,29 @@ Curated collection of learning materials:
 - Hashcat - Password cracking and hashing
 - Snort/Zeek - Network intrusion detection
 
-### Programming Languages
-- Python - Automation and scripting
-- Bash/Shell - System administration
-- SQL - Database security concepts
-- JavaScript - Web security fundamentals
-
-### Platforms & Environments
-- Linux/Ubuntu - Primary operating system
-- VirtualBox/Proxmox - Virtual lab environments
-- Docker - Containerized applications
-- AWS/Azure - Cloud security practices
-
 ## 📊 Learning Progress
 
-| Domain | Status | Labs Completed | Projects |
-|--------|--------|---|---|
-| Network Security | 🟨 In Progress | 0/5 | |
-| Cryptography | 🟨 In Progress | 0/4 | |
-| Web Security | 🟨 In Progress | 0/6 | |
-| Ethical Hacking | 🟨 In Progress | 0/5 | |
-| Incident Response | 🟨 In Progress | 0/4 | |
+## 🧪 Current Laboratory Focus
+
+I am currently documenting my hands-on experience from the **TryHackMe SOC L1 Analyst** and **Cybersecurity 101** pathways. 
+
+### 📡 Network Fundamentals
+* **Focus:** Understanding the OSI Model, TCP/UDP protocols, and common port analysis.
+* **Status:** Reviewing packet capture basics and network service enumeration.
+
+### 🐧 Linux Command Line
+* **Focus:** Mastering the terminal, file permissions (Read/Write/Execute), and directory navigation.
+* **Status:** Documenting core commands used during initial system reconnaissance.
+
+### 🛠️ Security Tooling
+* **Focus:** Learning the syntax for **Nmap** (Network Mapper) and **CyberChef** for data manipulation.
+* **Status:** Compiling a personal "Cheat Sheet" for efficient workflow.
 
 *Last Updated: 2026-03-23*
 
-## 🎯 Key Skills & Competencies
+## 🎯 Technical Focus & Learning Path
 
-### Network & Infrastructure Security
-- Network architecture and design
-- Firewall configuration and management
-- VPN implementation and troubleshooting
-- Intrusion detection and prevention systems
-- Network segmentation and zero-trust architecture
-
-### Application Security
-- Secure coding practices
-- Vulnerability identification and remediation
-- OWASP Top 10 mitigation
-- API security
-- Container and microservices security
-
-### Cryptography & Encryption
-- Symmetric and asymmetric encryption
-- Hashing and integrity verification
-- Digital signatures and PKI
-- Key management
-- Encryption protocol implementation
-
-### Threat & Risk Management
-- Vulnerability assessment
-- Penetration testing
-- Threat modeling
-- Risk analysis and mitigation
-- Security compliance frameworks
-
-### Incident Response
-- Log analysis and forensics
-- Threat detection and hunting
-- Incident triage and containment
-- Recovery procedures
-- Root cause analysis
+I am currently backtracking my recent labs and projects to document my hands-on experience on this portfolio.
 
 ## 🔐 Security Practices
 
@@ -146,14 +109,6 @@ This portfolio follows responsible security practices:
 - ✅ Proper handling of vulnerable applications
 - ✅ Ethical hacking principles followed
 - ✅ Permission-based penetration testing only
-
-## 📈 How to Navigate This Repository
-
-1. **Start with the README in each `/labs` subdirectory** for an overview of the topic
-2. **Follow the numbered exercises** in sequential order for progressive learning
-3. **Review the `/projects` folder** for integrated, real-world applications
-4. **Check `/resources`** for links to courses and learning materials
-5. **Explore `/certifications`** to see my credentials and achievements
 
 ## 🤝 Contributing & Feedback
 
@@ -168,10 +123,6 @@ While this is primarily a personal learning portfolio, I welcome:
 - **GitHub**: [@antoni-drop](https://github.com/antoni-drop)
 - **Email**: dropantoni@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile]
-
-## 📜 License
-
-This repository is for educational purposes. All code and documentation are provided as-is for learning and reference.
 
 ---
 
