@@ -4,7 +4,7 @@
 
 ### 🏆 Verified Certificates
 
-![Pre-Security Completion Certificate](../pre-security-cert.png)
+![Pre-Security Completion Certificate](/pre-security-cert.png)
 <img src="../pre-security-cert.png" width="600" alt="Pre-Security Certificate">
 
 
