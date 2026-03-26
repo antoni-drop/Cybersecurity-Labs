@@ -30,22 +30,21 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 This repository is organized into several key sections:
 
 ### [🔬 Labs](./Labs/README.md)
-Structured learning exercises and hands-on labs organized by topic:
+Structured learning exercises and hands-on labs organized by topic
 
 
-Each lab includes:
 
 
 ### 🚀 [Projects](./Projects/README.md)
-End-to-end cybersecurity projects demonstrating integrated knowledge:
+End-to-end cybersecurity projects demonstrating integrated knowledge
 
 
 ### 🎓 [Certifications](./Certifications/README.md)
-Tracking of cybersecurity certifications and credentials:
+Tracking of cybersecurity certifications and credentials
 
 
 ### 📚 [Resources](./Resources/README.md)
-Curated collection of learning materials:
+Curated collection of learning materials
 
 
 ## 🛠️ Tools & Technologies
@@ -56,17 +55,15 @@ Curated collection of learning materials:
 
 I am currently documenting my hands-on experience from the **TryHackMe SOC L1 Analyst** and **Cybersecurity 101** pathways. 
 
-### 📡 Network Fundamentals
-* **Focus:** Understanding the OSI Model, TCP/UDP protocols, and common port analysis.
-* **Status:** Reviewing packet capture basics and network service enumeration.
+### 🎯 Exploitation Basics
 
-### 🐧 Linux Command Line
-* **Focus:** Mastering the terminal, file permissions (Read/Write/Execute), and directory navigation.
-* **Status:** Documenting core commands used during initial system reconnaissance.
+* **Focus:** Moniker Link (CVE-2024-21413), Familiarising myself with a new tool Metasploit
+* **Status:** Metasploit: Introduction
 
-### 🛠️ Security Tooling
-* **Focus:** Learning the syntax for **Nmap** (Network Mapper) and **CyberChef** for data manipulation.
-* **Status:** Compiling a personal "Cheat Sheet" for efficient workflow.
+### 🔍 Network Traffic Analysis
+
+* **Focus:** Understanding how network traffic works and the tools that are used
+* **Status:** Network Traffic Basics
 
 *Last Updated: 2026-03-23*
 
