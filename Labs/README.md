@@ -16,7 +16,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 ---
 
-[🏠 Home](../README.md)
+
 
 
 
