@@ -6,11 +6,11 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 ### 📈 Training Progress
 
-**Path: [TryHackMe - Cybersecurity 101](./Cyber101.md)** [![Cyber 101 Badge](../certs/badges/cyber101.png)](./Cyber101.md)  
+**Path: [TryHackMe - Cybersecurity 101](./Cyber101.md)**  
 **Status:** ▓▓▓▓▓░░░░░ 49%  
 *Understanding the fundamental building blocks of security.*
 
-**Path: [TryHackMe - SOC Level 1](./SOC-L1.md)** [![SOC L1 Badge](../certs/badges/soc-l1.png)](./SOC-L1.md)  
+**Path: [TryHackMe - SOC Level 1](./SOC-L1.md)** 
 **Status:** ▓▓▓░░░░░░░ 35%  
 *Understanding how an analyst role works and what is needed to work in the field.*
 
