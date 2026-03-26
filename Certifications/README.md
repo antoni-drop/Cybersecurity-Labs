@@ -4,6 +4,7 @@
 
 ### 🏆 Verified Certificates
 
+![Certificate](./my-cert.png)
 
 
 
