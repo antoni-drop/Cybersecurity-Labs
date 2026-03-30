@@ -1,4 +1,4 @@
-
+# ⚡ John the Ripper: Password Cracking & Hash Analysis
 
 
 
