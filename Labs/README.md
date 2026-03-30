@@ -24,12 +24,12 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 ---
 
-## 📚 Study Notes & Guided Rooms
+## 📚 Knowledge Base
 *Foundational knowledge and tool familiarization.*
 
-* 🔍 [**Network Traffic Basics**](./Study-Notes/Network-Basics.md)  
+* 🔍 [**Networking**](./Knowledge-Base/Networking.md)  
   *OSI Model, TCP/UDP headers, and Wireshark basics.*
-* 🐧 [**Linux Fundamentals**](./Study-Notes/Linux-Fundamentals.md)  
+* 🐧 [**Linux**](./Knowledge-Base/Linux.md)  
   *CLI navigation, permissions, and package management.*
 
 ---
