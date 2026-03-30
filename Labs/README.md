@@ -19,7 +19,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 * 🔓 [**Moniker Link (CVE-2024-21413)**](./Technical-Labs/Moniker-Link.md)  
   *Analysis of the Outlook bypass and NTLM credential theft.*
-* ⚙️ [**Metasploit: Introduction**](./Technical-Labs/Metasploit-Intro.md)  
+* ⚙️ [**Metasploit**](./Technical-Labs/Metasploit-Mastery.md)  
   *Familiarization with MSFconsole and exploit delivery.*
 
 ---
