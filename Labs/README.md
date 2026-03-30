@@ -15,12 +15,18 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 ---
 
 ## 🚀 Featured Technical Labs
-*Deep dives into exploitation and defensive analysis.*
+*Step-by-step walkthroughs of practical security challenges.*
 
 * 🔓 [**Moniker Link (CVE-2024-21413)**](./Technical-Labs/Moniker-Link.md)  
-  *Analysis of the Outlook bypass and NTLM credential theft.*
-* 🏹 [**Metasploit**](./Technical-Labs/Metasploit-Mastery.md)  
-  *Familiarization with MSFconsole and exploit delivery.*
+  *Analyzing a real-world Outlook bypass and NTLM credential theft.*
+* 📧 [**Phishing Analysis: Greenholt & Snapped**](./Technical-Labs/Phishing-Analysis.md)  
+  *Investigating malicious emails and header artifacts.*
+* 🚩 [**Incident Response: Summit & Eviction**](./Technical-Labs/Incident-Response.md)  
+  *Tracking adversary movement using the Cyber Kill Chain.*
+* 🥒 [**Pickle Rick CTF**](./Technical-Labs/Pickle-Rick.md)  
+  *A full-chain exploitation lab: Enumeration to Root access.*
+* ⚡ [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
+  *Practical recovery of credentials from various hash types.*
 
 ---
 
