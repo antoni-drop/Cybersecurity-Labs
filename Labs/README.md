@@ -6,10 +6,10 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 ### 📈 Training Progress
 
-**Path: [TryHackMe - Cybersecurity 101](./Cyber101.md)** **Status:** ▓▓▓▓▓░░░░░ 49%  
+**Path: [TryHackMe - Cybersecurity 101](https://tryhackme.com/path/outline/cybersecurity101)** **Status:** ▓▓▓▓▓░░░░░ 49%  
 *Building the fundamental blocks of security.*
 
-**Path: [TryHackMe - SOC Level 1](./SOC-L1.md)** **Status:** ▓▓▓░░░░░░░ 35%  
+**Path: [TryHackMe - SOC Level 1](https://tryhackme.com/path/outline/soclevel1)** **Status:** ▓▓▓░░░░░░░ 35%  
 *Learning the analyst workflow and defensive operations.*
 
 ---
