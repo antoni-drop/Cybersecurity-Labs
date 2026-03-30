@@ -41,8 +41,8 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
   *Active Directory, Event Logs, and Windows internals.*
 * 🛡️ [**Security Frameworks**](./Knowledge-Base/Security-Frameworks.md)  
   *NIST, MITRE ATT&CK, and Cryptographic principles.*
-## 📚 Knowledge Base
-*Foundational knowledge and tool familiarization.*
+
+---
 
 * 🔍 [**Networking**](./Knowledge-Base/Networking.md)  
   *OSI Model, TCP/UDP headers, and Wireshark basics.*
