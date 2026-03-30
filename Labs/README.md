@@ -44,17 +44,6 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 ---
 
-* 🔍 [**Networking**](./Knowledge-Base/Networking.md)  
-  *OSI Model, TCP/UDP headers, and Wireshark basics.*
-* 🐧 [**Linux**](./Knowledge-Base/Linux.md)  
-  *CLI navigation, permissions, and package management.*
-* 🪟 [**Windows**](./Knowledge-Base/Windows.md)  
-  *Active Directory, Event Logs, and Windows internals.*
-* 🛡️ [**Security Frameworks**](./Knowledge-Base/Security-Frameworks.md)  
-  *NIST, MITRE ATT&CK, and Cryptographic principles.*
-
----
-
 ### 🛠️ Technical Toolset
 *Quick-reference documentation for security tools that I have used.*
 
