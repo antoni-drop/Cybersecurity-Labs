@@ -25,26 +25,6 @@ Check out my TryHackMe profile to see my progress and completed rooms.
 * 📚 **[Resources](./Resources/README.md)** - Study notes and documentation.
 * 🏅 **[Certifications](./Certifications/README.md)** - Professional validation.
 
-## 📂 Repository Structure
-
-This repository is organized into several key sections:
-
-### [🔬 Labs](./Labs/README.md)
-Structured learning exercises and hands-on labs organized by topic
-
-
-### 🚀 [Projects](./Projects/README.md)
-End-to-end cybersecurity projects demonstrating integrated knowledge
-
-
-### 🎓 [Certifications](./Certifications/README.md)
-Tracking of cybersecurity certifications and credentials
-
-
-### 📚 [Resources](./Resources/README.md)
-Curated collection of learning materials
-
-
 ## 🧪 Current Laboratory Focus
 
 I am currently documenting my hands-on experience from the **TryHackMe SOC L1 Analyst** and **Cybersecurity 101** pathways. 
