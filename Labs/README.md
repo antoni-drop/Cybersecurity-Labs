@@ -25,7 +25,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
   *Tracking adversary movement using the Cyber Kill Chain.*
 * 🥒 [**Pickle Rick CTF**](./Technical-Labs/Pickle-Rick.md)  
   *A full-chain exploitation lab: Enumeration to Root access.*
-* ⚡ [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
+* 🔓 [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
   *Practical recovery of credentials from various hash types.*
 
 ---
