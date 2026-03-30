@@ -19,7 +19,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 
 * 🔓 [**Moniker Link (CVE-2024-21413)**](./Technical-Labs/Moniker-Link.md)  
   *Analyzing a real-world Outlook bypass and NTLM credential theft.*
-* 📧 [**Phishing Analysis: Greenholt & Snapped**](./Technical-Labs/Phishing-Analysis.md)  
+* 🎣 [**Phishing Analysis: Greenholt & Snapped**](./Technical-Labs/Phishing-Analysis.md)  
   *Investigating malicious emails and header artifacts.*
 * 🚩 [**Incident Response: Summit & Eviction**](./Technical-Labs/Incident-Response.md)  
   *Tracking adversary movement using the Cyber Kill Chain.*
