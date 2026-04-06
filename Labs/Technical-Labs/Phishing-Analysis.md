@@ -53,7 +53,7 @@ I used the https://dmarcian.com/spf-survey/ tool to look up the SPF record of th
 
 Looking up the SPF record I confirmed whether the originating IP was an authorised sender. Since this IP was not listed in the domain’s SPF record, it confirmed that the email was sent from an unauthorised server.
 
-I checked the DMARC record of the same domain using the https://dmarcian.com/dmarc-inspector/ tool and looked for the 'Policy' (p=).s I noticed it was set a quarantine which explains why the email wasn't blocked. If it was set to reject the email most likely wouldn't have made it to the victim's inbox. 
+I checked the DMARC record of the same domain using the https://dmarcian.com/dmarc-inspector/ tool and looked for the Policy (p=).s I noticed it was set a quarantine which explains why the email wasn't blocked. If it was set to reject the email most likely wouldn't have made it to the victim's inbox. 
 
 <img width="317" height="43" alt="Screenshot 2026-04-06 175643" src="https://github.com/user-attachments/assets/94742a43-65b6-49ab-a541-040933e5a8e2" />
 
@@ -61,7 +61,7 @@ I turned my attention to the file attached to the email. I saved the file ready 
 
 <img width="389" height="26" alt="image" src="https://github.com/user-attachments/assets/ff569eff-1d45-4c51-b616-81051a78e6da" />
 
-I opened the terminal and got the sha265 hash of the file and scanned it in https://www.virustotal.com/gui/home/upload which flagged it as malicious. 
+I opened the terminal and got the SHA256 hash of the file and scanned it in https://www.virustotal.com/gui/home/upload which flagged it as malicious. 
 
 <img width="680" height="170" alt="image" src="https://github.com/user-attachments/assets/321af844-8894-45fb-b297-a3adc48d4298" />
 
