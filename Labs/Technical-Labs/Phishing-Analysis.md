@@ -51,7 +51,7 @@ I used the https://dmarcian.com/spf-survey/ tool to look up the SPF record of th
 
 <img width="491" height="47" alt="Screenshot 2026-04-06 175425" src="https://github.com/user-attachments/assets/c93170e9-9c58-40ce-96d9-3ee7f71e9e20" />
 
-Looking up the SPF record I confirmed whether the originating IP was an authorised sender. Since this IP was not listed in the domain’s SPF record, it confirmed that the email was sent from an unauthorized server.
+Looking up the SPF record I confirmed whether the originating IP was an authorised sender. Since this IP was not listed in the domain’s SPF record, it confirmed that the email was sent from an unauthorised server.
 
 I checked the DMARC record of the same domain using the https://dmarcian.com/dmarc-inspector/ tool and looked for the 'Policy' (p=).s I noticed it was set a quarantine which explains why the email wasn't blocked. If it was set to reject the email most likely wouldn't have made it to the victim's inbox. 
 
