@@ -38,7 +38,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 * 🐧 [**Linux**](./Knowledge-Base/Linux.md)  
   *CLI navigation, permissions, and package management.*
 * 🪟 [**Windows**](./Knowledge-Base/Windows.md)  
-  *Active Directory, Event Logs, and Windows internals.*
+  *Active Directory, Event Logs, and Windows Internals.*
 * 🛡️ [**Security Frameworks**](./Knowledge-Base/Security-Frameworks.md)  
   *NIST, MITRE ATT&CK, and Cryptographic principles.*
 
