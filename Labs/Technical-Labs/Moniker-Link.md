@@ -100,7 +100,7 @@ The exploit was found by **Haifei Li** of Check Point Research and Microsoft pat
 
 To defend against these attacks I would:
 
-- Make sure each application is up to date with the latest securit fixtures.
+- Make sure each application is up to date with the latest security fixtures.
 
 - Implement firewall rules to block outbound traffic on **Port 445** to prevent the hashes from being leaked even if a malicious link has been clicked.
 
