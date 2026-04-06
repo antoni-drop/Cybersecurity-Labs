@@ -47,7 +47,7 @@ The first URL triggers the "Protected View" and blocks the attempt.
 <img width="861" height="57" alt="Screenshot 2026-04-06 091203" src="https://github.com/user-attachments/assets/b1d7d52b-bdb2-4eb4-8b32-0b7cc0b36626" />
 
 
-This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the user's server. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
+This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the attacker's server. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
 
 
 
