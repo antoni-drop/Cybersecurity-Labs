@@ -49,6 +49,19 @@ The first URL triggers the "Protected View" and blocks the attempt.
 
 This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the attacker's server. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
 
+*In the THM room a PoC with a Python script is provided by the user CMNatic for this exploit which I have provided a link to at the bottom of this page.*
+
+Normally for this exploit you would need your own SMTP server but it has been provided for me as a part of this lab.
+
+Starting off, I used the **Responder** tool to create an SMB listener using the -I ens5 interface.
+
+
+
+<img width="509" height="105" alt="Screenshot 2026-04-06 104243" src="https://github.com/user-attachments/assets/8d7a4392-0d6b-46fe-84da-50982b5f1ecf" />
+
+I then set up the vulnerable machine provided in the THM room.
+
+<img width="1021" height="698" alt="Screenshot 2026-04-06 104713" src="https://github.com/user-attachments/assets/662c0e66-fb16-49cb-82cf-93fccf209023" />
 
 
 
@@ -64,11 +77,7 @@ This time, the **"!"** is embedded within the URL bypassing "Protected View". Th
 
 
 
-
-
-
-
-
+https://github.com/CMNatic/CVE-2024-21413
 
 ---
 [⬅️ Back to Labs](../README.md)
