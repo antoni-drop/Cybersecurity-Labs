@@ -2,7 +2,9 @@
 
 ### In this file there are two different CTF analyses. I have paired them together as they were a part of the "Phishing Analysis" module in the TryHackMe SOC L1 analyst pathway.
 
-## The Scenario 
+## The Greenholt Phish
+
+### The Scenario
 
 A sales executive at Greenholt PLC reported a suspicious email that appeared from a known customer. Although the senders name was familiar, the email triggered several high risk indicators that has been escalated to the SOC for further investigation.
 
@@ -67,6 +69,13 @@ I opened the terminal and got the SHA256 hash of the file and scanned it in http
 
 The file was a 400.26 KB RAR archive which contained a **Trojan**.
 
+> End of CTF #1
+
+---
+
+## Snapped Phishing Line
+
+### The Scenario
 
 
 
