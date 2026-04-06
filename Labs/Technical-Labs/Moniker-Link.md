@@ -5,15 +5,15 @@
 
 ### This my analysis on how a bypass in Microsoft Outlook's "Protected View" allows attackers to force NTLM authentication to a remote server.
 
-During this lab I learned how a single character (an exclamation point) turns a simple link into an automated **"ID thief"**. By exploiting a bypass that tricks Outlook's usual security checks through an exclamation point embedded in an email link **"!"**. I managed to bypass **"protected view"** completely. This let me force a user's computer to hand over its NTLM hashes without the user ever knowing. Doing this myself and seeing the hash pop up instantly made me realise why it was rated as a **9.8 Critical Vulnerability**.
+During this lab I learned how a single character (an exclamation point) turns a simple link into an automated **"ID thief"**. By exploiting a bypass that tricks Outlook's usual security checks through an exclamation point embedded in an email link **"!"**. I managed to bypass **"protected view"** completely. This allowed me to force a user's computer to hand over its NTLM hashes without the user ever knowing. Doing this myself and seeing the hash pop up instantly made me realise why it was rated as a **9.8 Critical Vulnerability**.
 
 ### So what actually is a Moniker?
 
-As microsoft states: **"A moniker in COM is not only a way to identify an object—a moniker is also implemented as an object. This object provides services allowing a component to obtain a pointer to the object identified by the moniker. This process is referred to as binding."**  
+As Microsoft states: **"A moniker in COM is not only a way to identify an object—a moniker is also implemented as an object. This object provides services allowing a component to obtain a pointer to the object identified by the moniker. This process is referred to as binding."**  
 
 > **Note:** **COM** stands for **Component Object Model**. It is the language that Microsoft uses to let other software components talk to each other.
 
-In my own words, a **Moniker** is a **"Smart-Link"**. As a normal link just points to a file, a Moniker Link points to that file as well as carrying instructions on how that file should be opened or **"Bound"**. Binding is essentially the handshake. The computer isn't just looking at the link but actually opens a live connection to that file.
+In my own words, a **Moniker** is a **"Smart-Link"**. While a standard link just points to a file, a Moniker Link identifies that file as well as carrying instructions on how that file should be opened or **"Bound"**. Binding is essentially the handshake. The computer isn't just looking at the link but actually opens a live connection to that file.
 In relation to this exploit the **"!"** symbol triggers the **"binding process"**. This causes Outlook's usual security process to skip completely letting me force a connection with the user and jump to connecting them to my malicious server. 
 
 
@@ -47,7 +47,7 @@ The first URL triggers the "Protected View" and blocks the attempt.
 <img width="861" height="57" alt="Screenshot 2026-04-06 091203" src="https://github.com/user-attachments/assets/b1d7d52b-bdb2-4eb4-8b32-0b7cc0b36626" />
 
 
-This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the attacker's server. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
+This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the attacker's server. The authentication occurs before the application realises that the file doesn't exist. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
 
 ---
 
@@ -92,20 +92,42 @@ After clicking the "click me" I went back to my attacker machine and checked my 
 
 The NTLMv2 Hash has been captured!
 
+---
+
+## How was the vulnerability addressed?
+
+The exploit was found by **Haifei Li** of Check Point Research and Microsoft patched this vulnerability on February 13th 2024. 
+
+To defend against these attacks I would:
+
+- Make sure each application is up to date with the latest securit fixtures.
+
+- Implement firewall rules to block outbound traffic on **Port 445** to prevent the hashes from being leaked even if a malicious link has been clicked.
+
+- Move away from NTLM protocols as they are older to a more secure method like Kerberos as your password hashes never leave your local machine to go to the target server. Instead, it uses an encrypted ticket system.
 
 
+--- 
 
+### 🛠️ Tools & Skills
 
+Tools: Responder, Python3, Nano
 
+Protocols: SMB, NTLMv2, COM/Monikers, SMTP.
 
+Concepts: Credential Theft, Protocol Leaking, Bypass Techniques.
 
+---
 
+### 📚 Resources & References
 
+Lab Environment: [TryHackMe - Moniker Link Room](https://tryhackme.com/room/monikerlink)
 
+Vulnerability Documentation: [MITRE CVE-2024-21413](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-21413)
 
+Technical Deep Dive: Research by Haifei Li (Checkpoint) https://research.checkpoint.com/2024/the-risks-of-the-monikerlink-bug-in-microsoft-outlook-and-the-big-picture/
 
-
-https://github.com/CMNatic/CVE-2024-21413
+Script Credit: https://github.com/CMNatic/CVE-2024-21413
 
 ---
 [⬅️ Back to Labs](../README.md)
