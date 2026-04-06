@@ -49,11 +49,13 @@ The first URL triggers the "Protected View" and blocks the attempt.
 
 This time, the **"!"** is embedded within the URL bypassing "Protected View". The share does not have to exist on the remote device as an authentication attempt will proceed regardless. The vulnerability isn't about successfully opening a file, it's about establishing a connection with the attacker's server. This results in the user's Windows netNTLMv2 hash being sent to the attacker.
 
+---
+
 *In the THM room a PoC with a Python script is provided by the user CMNatic for this exploit which I have provided a link to at the bottom of this page.*
 
 Normally for this exploit you would need your own SMTP server but it has been provided for me as a part of this lab.
 
-Starting off, I used the **Responder** tool to create an SMB listener using the -I ens5 interface.
+Starting off, I used the **Responder** tool to create an SMB listener using the **-I ens5** interface.
 
 
 
@@ -63,6 +65,32 @@ I then set up the vulnerable machine provided in the THM room.
 
 <img width="1021" height="698" alt="Screenshot 2026-04-06 104713" src="https://github.com/user-attachments/assets/662c0e66-fb16-49cb-82cf-93fccf209023" />
 
+---
+
+
+I created a new file called **exploit.py** using **nano** (**nano exploit.py**) then copy and pasted the Python script into it. After the script was pasted I needed to change the Moniker Link line and put in the attacker IP address into the placeholder as shown below.
+
+<img width="552" height="16" alt="Screenshot 2026-04-06 134056" src="https://github.com/user-attachments/assets/eea200da-e0cf-414d-bffe-335a3542fb55" />
+
+The mailserver IP also needed changed (to the victims IP) so I replaced that too.
+
+<img width="368" height="15" alt="Screenshot 2026-04-06 134953" src="https://github.com/user-attachments/assets/b1e8bceb-a3a8-4309-b755-5dc375994c9a" />
+
+---
+
+The next step was to execute the python script. In this case, the password was **attacker**.
+
+<img width="398" height="72" alt="Screenshot 2026-04-06 135314" src="https://github.com/user-attachments/assets/fe696a82-ab4a-4240-803d-03765d6daf84" />
+
+Switching over to the vulnerable machine, this is the email that was sent:
+
+<img width="832" height="240" alt="Screenshot 2026-04-06 135712" src="https://github.com/user-attachments/assets/4eb96ae2-f852-4e55-8f0d-f4bca93cce3a" />
+
+After clicking the "click me" I went back to my attacker machine and checked my responder.
+
+<img width="953" height="127" alt="Screenshot 2026-04-06 140004" src="https://github.com/user-attachments/assets/f11ff7b8-d0e4-4a89-bc64-0c4f06cda367" />
+
+The NTLMv2 Hash has been captured!
 
 
 
