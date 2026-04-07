@@ -6,7 +6,7 @@
 
 ### The Scenario
 
-A sales executive at Greenholt PLC reported a suspicious email that appeared from a known customer. Although the senders name was familiar, the email triggered several high risk indicators that has been escalated to the SOC for further investigation.
+A sales executive at Greenholt PLC reported a suspicious email that appeared from a known customer. Although the senders name was familiar, the email triggered several high risk indicators that have been escalated to the SOC for further investigation.
 
 The main goal is to find and analyse key artifacts investigating the key message source using tools to assess the potential maliciousness of the email.
 
@@ -141,8 +141,21 @@ For the recipe I needed to add reverse as the flag was reversed and this is the 
 
 ## Conclusion
 
-Going through both of these CTFs I managed to 
+Going through both of these CTFs I managed to understand how attackers use phishing attacks to compromise a system. 
+I gained hands-on experience in:
 
+- **Header Analysis** : Using SPF, DMARC to identify unauthorised senders.
+- **Artifact Forensics** : Getting the sha256 hashes of malicious software and scanning them in a tool like VirusTotal.
+- **Infrastructure Analysis** : Understanding how attackers use phishing kits and whats hidden inside them.
+- **De-obfuscation** : Using tools like **CyberChef** to de-obfuscate encoded material.
+
+---
+
+🔗 Resources & Labs
+
+Lab 1: [The Greenholt Phish](https://tryhackme.com/room/phishingemails5fgjlzxc) - TryHackMe
+
+Lab 2: [Snapped Phishing Line](https://tryhackme.com/room/snappedphishingline) - TryHackMe
 
 
 
