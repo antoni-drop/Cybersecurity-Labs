@@ -1,6 +1,6 @@
 # 🎣 Phishing Analysis: The Greenholt Phish & Snapped Phishing Line
 
-### In this file there are two different CTF analyses. I have paired them together as they were a part of the "Phishing Analysis" module in the TryHackMe SOC L1 analyst pathway.
+### In this file there are two different CTF analyses. I have paired them together as they were a part of the "Phishing Analysis" module in the TryHackMe SOC L1 analyst pathway. I've documented the different cycles of these attacks and what I did to investigate them.
 
 ## The Greenholt Phish
 
@@ -139,8 +139,9 @@ For the recipe I needed to add reverse as the flag was reversed and this is the 
 
 ---
 
-From completing these two CTF's I was able to identify the different stages of a phishing lifecycle.
+## Conclusion
 
+Going through both of these CTFs I managed to 
 
 
 
