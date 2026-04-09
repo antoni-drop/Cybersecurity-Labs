@@ -75,6 +75,7 @@ This is a long term defence as this isn't just blocking an IP or a domain, its d
 
 ### Level 5 (Network Artifacts)
 
+<img width="816" height="751" alt="image" src="https://github.com/user-attachments/assets/702e1c0f-dc77-4490-a00e-56e096555e1a" />
 
 
 
