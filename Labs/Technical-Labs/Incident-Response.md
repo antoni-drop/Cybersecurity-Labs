@@ -57,11 +57,23 @@ Unlike a free IP change using a VPN, you have to buy a new domain but many regis
 
 ---
 
-### Level 4 (Network Artifacts)
+### Level 4 (Host Artifacts)
 
-Sample 4 was about finding artifacts the malware left on the system. This is the evidence left on the victims machine.
+Sample 4 was about finding artifacts the malware left on the system. This is the evidence left on the victims machine:
 
+<img width="983" height="283" alt="image" src="https://github.com/user-attachments/assets/38aaa9b1-e144-4ab9-9f10-1be03ae3acd5" />
 
+The malware attempted to modify the windows registry keys to disable **Windows Defender Real Time Monitoring** which is more than likely a defense evasion **Host Artifact**.
+
+By using the **Sigma Rule Builder** in the SIEM I created a new sigma rule in the system to stop the malwares attempt of disabling real time monitoring:
+
+<img width="658" height="260" alt="image" src="https://github.com/user-attachments/assets/3bfbae40-beda-48c6-9a83-d1b5dbfcc970" />
+
+This is a long term defence as this isn't just blocking an IP or a domain, its detecting a specific behaviour and stopping it. This is classed as **"annoying"** for the attacker to deal with as it is defending against the malwares code itself rather than how it reaches the system. Breaking how the attacker communicates with the host making it time consuming and expensive for the attacker to change.
+
+---
+
+### Level 5 (Network Artifacts)
 
 
 
