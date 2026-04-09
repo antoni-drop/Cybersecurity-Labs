@@ -20,7 +20,7 @@ Using the PicoSecure **SIEM** console, I scanned the file using the **"Malware S
 
 <img width="424" height="65" alt="image" src="https://github.com/user-attachments/assets/98892135-3221-4c4a-9cb6-253b67d8c57f" />
 
-After locating the hash, I added it to the Hash Block list which gave me my first flag for the task. 
+After locating the hash, I added it to the Hash Block list: 
 
 Blocking the hash is a necessary immediate response however it sits at the bottom of the **Pyramid Of Pain**. This is because the attacker can alter a single line of code in the malware which will change the hash completely making the block useless. For an attacker, it is trivial to bypass. However, since hashes are all unique to a file they are the highest confidence indicators of indentifying the threat.
 
@@ -45,14 +45,15 @@ In this case, the tester signed up to a cloud service provider giving them a lar
 
 ### Level 3 (Domain Names)
 
-In the third sample, I found a domain with a backdoor so I went to the **DNS Rule Manager** and created a new rule in the SIEM and implemented a block:
+In the third sample, I found the suspicious domain the attacker was using with a backdoor so I went to the **DNS Rule Manager** and created a new rule in the SIEM and implemented a block:
 
 <img width="759" height="397" alt="image" src="https://github.com/user-attachments/assets/ea460656-471f-4f6d-ba06-f4796e4885d8" />
 
 Blocking a domain is classed as **"simple"** to change for an attacker on the pyramid of pain. 
 
-Unlike a free IP change on a VPN, you have to buy a new domain but many registrars offer domains for very cheap so the financial pain is minimal.
+Unlike a free IP change using a VPN, you have to buy a new domain but many registrars offer domains for very cheap so the financial pain is minimal for the attacker. A sophisticated attacker would more than likely have more than one domain to work with. However if the attacker has one domain, it does slow them down as getting a new domain isn't as quick and changing your IP because of **DNS Propogation**. This creates a window of opportunity for the defense team giving critical time to isolate and remediate infected systems.
 
+> **NOTE** : **DNS Propogation** is the **"lag time"** that servers around the world register that your website domain has changed. The internet basically has to update its **"phone book"**.
 
 
 
