@@ -55,7 +55,11 @@ Unlike a free IP change using a VPN, you have to buy a new domain but many regis
 
 > **NOTE** : **DNS Propogation** is the **"lag time"** that servers around the world register that your website domain has changed. The internet basically has to update its **"phone book"**.
 
+---
 
+### Level 4 (Network Artifacts)
+
+Sample 4 was about finding artifacts the malware left on the system. This is the evidence left on the victims machine.
 
 
 
