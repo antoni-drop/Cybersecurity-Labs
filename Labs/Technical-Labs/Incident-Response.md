@@ -138,7 +138,7 @@ By blocking the attackers **data staging** process, I prevented the attacker fro
 
 ---
 
-# Lab 2 : Eviction
+# Lab 2 : Eviction 🛡️
 
 This lab is focused on the **Cyber Kill Chain** mapping threat intelligence to the **MITRE ATT&CK** framework. The link to the **ATT&CK Navigator** is provided below:
 
