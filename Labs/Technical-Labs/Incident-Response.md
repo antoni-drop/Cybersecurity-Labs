@@ -4,6 +4,10 @@
 
 # Lab 1 : Summit  🏔️
 
+<img width="299" height="169" alt="image" src="https://github.com/user-attachments/assets/06f90c30-2e2c-4538-8387-9c04e067276d" />
+
+> A diagram of the **Pyramid of Pain**
+
 ## Scenario
 
 PicoSecure is conducting a threat simulation and detection engineering management to improve their malware detection capabilities following a high volume of recent incident response activities. 
@@ -80,18 +84,63 @@ This time, the next sample given was a network traffic log file. This contained 
 
 <img width="816" height="751" alt="image" src="https://github.com/user-attachments/assets/702e1c0f-dc77-4490-a00e-56e096555e1a" />
 
-Looking at this file, I noticed a few things:
+Looking at this file, I noticed this:
 
 - Consistent packet size of 97 bytes.
 - Fixed frequency of 30 minutes.
 
-This pattern shows that the malware reconnects every 30 minutes  to ask if the attackers **Command and Control** server has any new instructions. This is because if the malware was connected all the time it would be a lot easier to detect trying to blend in with with the normal background noise.
+This pattern shows that the malware reconnects every 30 minutes to ask if the attackers **Command and Control** server has any new instructions. This is because if the malware was connected all the time it would be a lot easier to detect trying to blend in with with the normal background noise.
 
 <img width="640" height="247" alt="image" src="https://github.com/user-attachments/assets/e3d9c10c-a852-48f4-a885-3ef8d2c3e2c2" />
 
 To combat this, I created a new rule in the sigma rule builder and blocked all connections with a 97 byte file size every 30 minutes (1800 seconds).
 
 This is classed as **"annoying"** on the pyramid of pain. This is because the attacker will have to change the communication protocol in the malware which will take some time to test and reconfigure for an attack.
+
+---
+
+### Level 6 (TTPs)
+
+The highest level is **Tactics, Techniques and Procedures**. This is the highest on the pyramid classed as **"tough"** as this isn't anything to do with the tools being used but the behavioural patterns and methodologies of the attacker.
+
+For the final sample I was given a command log where I was able to identify the attackers playbook:
+
+<img width="449" height="246" alt="image" src="https://github.com/user-attachments/assets/22282bce-e31b-45e7-8a57-819260417267" />
+
+> **NOTE**: I copy and pasted the logs into AI to give me an analysis of the commands as at the time I didn't completely understand every single log in the file. 
+
+I noticed the attacker was piping outputs to a hidden file named **exfiltr8.log** in the **%temp%** folder preparing it for theft.
+
+The attacker was using the **dir** command to enumarate the file system to map out drives (C: and D:) to look for sensitive data in **documents** and **settings** or the **program files**. Using the **>>** operator to gather all the output into a single staging file. A staging file is like the attackers "shopping bag". The attacker isn't sending a bunch of suspicious requests but instead gathering all the data into a single file.
+The attacker was also using other commands:
+
+- **ver** and **systeminfo** to identify the system version to find specific exploits for privelege escalation
+- **ipconfig /all** to map the network interface and identify where the machine sits in the local network.
+- **netstat -ano** to check for active connections so they can find their next target.
+- **net start** to list services that are running so they can identify secuirty software that they need to bypass or disable.
+
+Under the **MITRE ATT&CK** tactics, the commands would be categorised like this:
+
+- System Information Discovery: **ver, systeminfo**
+- System Network Configuration Discovery: **ipconfig /all**
+- System Network Connections Discovery: **netstat -ano**
+- System Service Discovery: **net start**
+
+I created a new sigma rule in the SIEM that blocks any output into the attackers **%temp%** temporary directory as blocing the commands would cause issues for the whole system:
+
+<img width="646" height="146" alt="Screenshot 2026-04-12 104735" src="https://github.com/user-attachments/assets/8dd5ed76-5d93-43c2-aeb2-2abe309ea2b3" />
+
+By blocking the attackers **data staging** process, I prevented the attacker from reaching the **Exfiltration** phase of their attack.
+
+### The Summit CTF is complete!
+
+<img width="296" height="92" alt="Screenshot 2026-04-12 104813" src="https://github.com/user-attachments/assets/d5c312f6-666d-405e-8495-8cc462ef1028" />
+
+---
+
+# Lab 2 : Eviction
+
+
 
 
 
