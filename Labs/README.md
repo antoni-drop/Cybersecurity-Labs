@@ -22,7 +22,7 @@ This directory is a record of my hands-on cybersecurity training. Here, I docume
 * 🎣 [**Phishing Analysis: The Greenholt Phish & Snapped Phishing Line**](./Technical-Labs/Phishing-Analysis.md)  
   *Investigating malicious emails and header artifacts.*
 * 🚩 [**Incident Response: Summit & Eviction**](./Technical-Labs/Incident-Response.md)  
-  *Tracking adversary movement using the Cyber Kill Chain.*
+  * Pyramid Of Pain and the Cyber Kill Chain.*
 * 🥒 [**Pickle Rick CTF**](./Technical-Labs/Pickle-Rick.md)  
   *A full-chain exploitation lab: Enumeration to Root access.*
 * 🔓 [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
