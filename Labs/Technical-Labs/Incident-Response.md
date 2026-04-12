@@ -89,7 +89,7 @@ Looking at this file, I noticed this:
 - Consistent packet size of 97 bytes.
 - Fixed frequency of 30 minutes.
 
-This pattern shows that the malware reconnects every 30 minutes to ask if the attackers **Command and Control** server has any new instructions. This is because if the malware was connected all the time it would be a lot easier to detect trying to blend in with with the normal background noise.
+This pattern shows that the malware reconnects every 30 minutes to ask if the attackers **Command and Control** server has any new instructions. This is because if the malware was connected all the time it would be a lot easier to detect. Instead it blends in with the normal background noise.
 
 <img width="640" height="247" alt="image" src="https://github.com/user-attachments/assets/e3d9c10c-a852-48f4-a885-3ef8d2c3e2c2" />
 
@@ -145,7 +145,7 @@ This lab is focused on the **Cyber Kill Chain** mapping threat intelligence to t
 https://static-labs.tryhackme.cloud/sites/eviction/
 
 > Methodology : I also used AI assisted analysis here to help me map the complex TTP's to the adversary group as I understand that using AI is common in the SOC workflow. The lab itself was just finding the different techniques listed in the framework to answer questions but i've done my best to try understand the whole process and the "why" behind it to make it a bit more of an advanced writeup.
-> 
+
 ## Scenario
 
 E-Corp is a company that manufactures rare earth metals for government and non-government clients. Sunny, an SOC analyst in the company received an intelligence report that informs her about an attacker group **APT28** might be trying to attack organisations similar to E-Corp. For this task I need to act on this intelligence identifying the groups "digital fingerprints" using the **MITRE ATT&CK** framework to see if they have been successful in breaching E-Corp's manufacturing data.
@@ -201,7 +201,7 @@ Based on the **ATT&CK NAVIGATOR** analysis for APT28, I mapped the likely path t
 
 ---
 
-While MITRE ATT&CK provides the specific "moves" the attacker makes, I have organized this playbook using the **Cyber Kill Chain** to show the timeline of the attack. By mapping these together, I can identify where we have the best chance to "break the chain."
+While **MITRE ATT&CK** provides the specific "moves" the attacker makes, I have organized this playbook using the **Cyber Kill Chain** to show the timeline of the attack. By mapping these together, I can identify where we have the best chance to "break the chain."
 
 - Phases 1-2 (Access & Execution): Where the "entry" can be stopped.
 
