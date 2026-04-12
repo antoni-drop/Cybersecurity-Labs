@@ -56,7 +56,7 @@ In the third sample, I found the suspicious domain the attacker was using with a
 
 Blocking a domain is classed as **"simple"** to change for an attacker on the pyramid of pain. 
 
-Unlike a free IP change using a VPN, you have to buy a new domain but many registrars offer domains for very cheap so the financial pain is minimal for the attacker. A sophisticated attacker would more than likely have more than one domain to work with. However if the attacker has one domain, it does slow them down as getting a new domain isn't as quick and changing your IP because of **DNS Propogation**. This creates a window of opportunity for the defense team giving critical time to isolate and remediate infected systems.
+Unlike a free IP change using a VPN, you have to buy a new domain but many registrars offer domains for very cheap so the financial pain is minimal for the attacker. A sophisticated attacker would more than likely have more than one domain to work with. However if the attacker has one domain, it does slow them down as getting a new domain isn't as quick and changing your IP because of **DNS Propogation**. This creates a window of opportunity for the defence team giving critical time to isolate and remediate infected systems.
 
 > **NOTE** : **DNS Propogation** is the **"lag time"** that servers around the world register that your website domain has changed. The internet basically has to update its **"phone book"**.
 
@@ -68,7 +68,7 @@ Sample 4 was about finding artifacts the malware left on the system. This is the
 
 <img width="983" height="283" alt="image" src="https://github.com/user-attachments/assets/38aaa9b1-e144-4ab9-9f10-1be03ae3acd5" />
 
-The malware attempted to modify the windows registry keys to disable **Windows Defender Real Time Monitoring** which is more than likely a defense evasion **Host Artifact**.
+The malware attempted to modify the Windows registry keys to disable **Windows Defender Real Time Monitoring** which is more than likely a defence evasion **Host Artifact**.
 
 By using the **Sigma Rule Builder** in the SIEM I created a new sigma rule in the system to stop the malwares attempt of disabling real time monitoring:
 
@@ -148,9 +148,9 @@ https://static-labs.tryhackme.cloud/sites/eviction/
 > 
 ## Scenario
 
-E-Corp is a company that manufactures rare earth metals for government and non-government clients. Sunny, an SOC analyst in the company received an intelligence report that informs her about an attacker group **APT28** might be trying to attack organisations similar to E-Corp. For this task I need to act on this intelligence identifying the groups "digital fingerprints" using the **MITRE ATT%CK** framework to see if they have been successful in breaching E-Corp's manufacturing data.
+E-Corp is a company that manufactures rare earth metals for government and non-government clients. Sunny, an SOC analyst in the company received an intelligence report that informs her about an attacker group **APT28** might be trying to attack organisations similar to E-Corp. For this task I need to act on this intelligence identifying the groups "digital fingerprints" using the **MITRE ATT&CK** framework to see if they have been successful in breaching E-Corp's manufacturing data.
 
-> **NOTE** : in a real world scenario this would be called a **Threat-Informed Defence** where companies look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
+> **NOTE** : in a real world scenario this would be called a **Threat-Informed Defence** where company's look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
 
 ## APT28 Adversary Playbook
 
@@ -164,14 +164,33 @@ Based on the **ATT&CK NAVIGATOR** analysis for APT28, I mapped the likely path t
 2 - **Execution and Persistence**
 
 - **Malicious File (T1204.002) & Malicious Link (T1204.001)** : These two methods are what makes the attack change from a "threat" into an "incident" if a user is tricked by these compromised emails to click one of these links.
-- **PowerShell (T1059.001) & Windows Command Shell (T1059.003)** : APT's use this as PowerShell and CMD are already installed on every windows machine. This is because rather than bringing in their own tools which an antivirus might catch, they use the computers to do their dirty work on their own system to gain access. This is known as "living off the land".
-- **Registry Run Keys / Startup Folder (T1547.001)** : This is how the attacker made sure they don't get kicked out. By changing the windows registry run keys they can force the malware to start up automatically whenever the computer is turned on or a user logs in. Monitoring these keys should be a top priority as this is a pernament "backdoor" within the system.
+- **PowerShell (T1059.001) & Windows Command Shell (T1059.003)** : APT's use this as PowerShell and CMD are already installed on every Windows machine. This is because rather than bringing in their own tools which an antivirus might catch, they use the computers to do their dirty work on their own system to gain access. This is known as "living off the land".
+- **Registry Run Keys / Startup Folder (T1547.001)** : This is how the attacker made sure they don't get kicked out. By changing the Windows registry run keys they can force the malware to start up automatically whenever the computer is turned on or a user logs in. Monitoring these keys should be a top priority as this is a permanent "backdoor" within the system.
 
-3 - **Defense Evasion and Discovery**
+3 - **Defence Evasion and Discovery**
 
-- **Rundll32** : This system binary is a normal part of windows so the APT is using it to run their malicious code while making it look like it is a standard background process. It keeps the code disguised and trusted in the system.
+- **Rundll32 (T1218.011)** : This system binary is a normal part of Windows so the APT is using it to run their malicious code while making it look like it is a standard background process. It keeps the code disguised and trusted in the system.
 - **Network Sniffing (T1040)** : The APT used the **Responder** tool within the system capturing usernames and hashed passwords that allowed access to legitimate credentials. The attacker is "eavesdropping" on the network traffic within the system.
-  
+
+4 - **Lateral Movement and Exfiltration**
+
+- **SMB/Windows Admin Shares (T1021.002)** : The APT is moving "sideways" from computer to computer. They are using **[Net]** (NetNTLM Hashes) and administrator credentials to map network drives. This is done to gain access to shared folders and servers where the company's sensitive data is stored.
+- **SharePoint (T1213.002)** : The primary target was to steal intellectual property from E-corp's information repositories as Microsoft Sharepoint was the company's "digital vault".
+- **External Proxy & Multi-hop Proxy** (T1090.002 & T1090.003) : The APT uses "middle man" computers to bounce the data back without getting caught which disguises the traffic making it look like a person browsing through the web.
+
+While MITRE ATT&CK provides the specific "moves" the attacker makes, I have organized this playbook using the **Cyber Kill Chain** to show the timeline of the attack. By mapping these together, I can identify where we have the best chance to "break the chain."
+
+- Phases 1-2 (Access & Execution): Where we stop the "entry."
+
+- Phases 3-4 (Persistence & Evasion): Where we catch them "hiding."
+
+- Phases 5-7 (Lateral Movement & Exfiltration): Where we stop the "theft."
+
+By spotting the "digital fingerprints" the APT is using E-Corp can identify the adversary groups TTP's. Going from looking for an alert to knowing how these groups function. This makes them easier to spot and ensures the system is defended against their tactics.
+
+### Conclusion
+
+Through completing these two CTFs I've managed to demonstrate how the Pyramid Of Pain and the Cyber Kill chain works. Using the **MITRE ATT&CK** framework to map adversary movement while using the **Cyber Kill Chain** to be able to see what phase of the attack the APT was in.
 
 
 ---
