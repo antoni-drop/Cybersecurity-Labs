@@ -152,6 +152,27 @@ E-Corp is a company that manufactures rare earth metals for government and non-g
 
 > **NOTE** : in a real world scenario this would be called a **Threat-Informed Defence** where company's look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
 
+---
+## ⛓️ The Cyber Kill Chain
+
+This is a framework used to identify and prevent cyberattacks. The idea is that an attacker must go through every stage to reach their goal. There are 7 different stages:
+
+- **Reconnaissance**: Researching and identifying targets.
+
+- **Weaponization**: Creating a malicious payload (e.g, a virus attached to a document).
+
+- **Delivery**: Sending the payload to the victim (e.g, via spearphishing emails).
+
+- **Exploitation**: The code executes on the victim's system, often through a software vulnerability.
+
+- **Installation**: The malware installs a permanent "backdoor" to maintain access (Persistence).
+
+- **Command & Control (C2)**: The infected host opens a channel to the attacker's server to receive instructions.
+
+- **Actions on Objectives**: The final goal, such as data exfiltration (theft) or encryption.
+
+
+
 ## APT28 Adversary Playbook
 
 Based on the **ATT&CK NAVIGATOR** analysis for APT28, I mapped the likely path they would use to go through E-Corp's network so protective measures are in place before waiting for an alert.
@@ -178,19 +199,21 @@ Based on the **ATT&CK NAVIGATOR** analysis for APT28, I mapped the likely path t
 - **SharePoint (T1213.002)** : The primary target was to steal intellectual property from E-corp's information repositories as Microsoft Sharepoint was the company's "digital vault".
 - **External Proxy & Multi-hop Proxy** (T1090.002 & T1090.003) : The APT uses "middle man" computers to bounce the data back without getting caught which disguises the traffic making it look like a person browsing through the web.
 
+---
+
 While MITRE ATT&CK provides the specific "moves" the attacker makes, I have organized this playbook using the **Cyber Kill Chain** to show the timeline of the attack. By mapping these together, I can identify where we have the best chance to "break the chain."
 
-- Phases 1-2 (Access & Execution): Where we stop the "entry."
+- Phases 1-2 (Access & Execution): Where the "entry" can be stopped.
 
-- Phases 3-4 (Persistence & Evasion): Where we catch them "hiding."
+- Phases 3-4 (Persistence & Evasion): Where you catch them "hiding."
 
-- Phases 5-7 (Lateral Movement & Exfiltration): Where we stop the "theft."
+- Phases 5-7 (Lateral Movement & Exfiltration): Identifying the "theft".
 
 By spotting the "digital fingerprints" the APT is using E-Corp can identify the adversary groups TTP's. Going from looking for an alert to knowing how these groups function. This makes them easier to spot and ensures the system is defended against their tactics.
 
 ### Conclusion
 
-Through completing these two CTFs I've managed to demonstrate how the Pyramid Of Pain and the Cyber Kill chain works. Using the **MITRE ATT&CK** framework to map adversary movement while using the **Cyber Kill Chain** to be able to see what phase of the attack the APT was in.
+Through completing these two CTFs I've managed to demonstrate how the **Pyramid Of Pain** and the **Cyber Kill Chain** works. Using the **MITRE ATT&CK** framework to map adversary movement while using the **Cyber Kill Chain** to be able to see what phase of the attack the APT was in.
 
 
 ---
