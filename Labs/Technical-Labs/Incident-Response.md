@@ -22,7 +22,7 @@ Using the PicoSecure **SIEM** console, I scanned the file using the **"Malware S
 
 After locating the hash, I added it to the Hash Block list: 
 
-Blocking the hash is a necessary immediate response however it sits at the bottom of the **Pyramid Of Pain**. This is because the attacker can alter a single line of code in the malware which will change the hash completely making the block useless. For an attacker, it is trivial to bypass. However, since hashes are all unique to a file they are the highest confidence indicators of indentifying the threat.
+Blocking the hash is a necessary immediate response however it sits at the bottom of the **Pyramid Of Pain**. This is because the attacker can alter a single line of code in the malware which will change the hash completely making the block useless. For an attacker, it is **trivial** to bypass. However, since hashes are all unique to a file they are the highest confidence indicators of indentifying the threat.
 
 In a real world scenario, **fuzzy hashing** is used as a line of defence because it identifies similar file structures and shared code patterns. Categorising malware into **"families"** making them easier to detect even though their hash has changed.
 
@@ -36,11 +36,12 @@ Moving up the pyramid, **IP addresses** are next. As the attacker probably modif
 
 Since the malware is on the local machine, I need to block any traffic coming out to the attackers **C2 (Command and Control)** server.
 
-Blocking IPs is also a trivial bypass for an attacker as all they have to do is change their IP through a VPN or use a different proxy and the malware can re-establish its connection.
+Blocking IPs is also an **easy** bypass for an attacker as all they have to do is change their IP through a VPN or use a different proxy and the malware can re-establish its connection.
 
 In this case, the tester signed up to a cloud service provider giving them a large pool of IP addresses to use as proxies.
 
 > **NOTE** : Proxies are the "middlemen" for internet traffic. Requests go through them rather than straight to the website or server on your behalf. Attackers use this as this keeps them hidden.
+
 ---
 
 ### Level 3 (Domain Names)
@@ -75,11 +76,22 @@ This is a long term defence as this isn't just blocking an IP or a domain, its d
 
 ### Level 5 (Network Artifacts)
 
+This time, the next sample given was a network traffic log file. This contained the behavioural fingerprints of how the malware communicated with the system:
+
 <img width="816" height="751" alt="image" src="https://github.com/user-attachments/assets/702e1c0f-dc77-4490-a00e-56e096555e1a" />
 
+Looking at this file, I noticed a few things:
 
+- Consistent packet size of 97 bytes.
+- Fixed frequency of 30 minutes.
 
+This pattern shows that the malware reconnects every 30 minutes  to ask if the attackers **Command and Control** server has any new instructions. This is because if the malware was connected all the time it would be a lot easier to detect trying to blend in with with the normal background noise.
 
+<img width="640" height="247" alt="image" src="https://github.com/user-attachments/assets/e3d9c10c-a852-48f4-a885-3ef8d2c3e2c2" />
+
+To combat this, I created a new rule in the sigma rule builder and blocked all connections with a 97 byte file size every 30 minutes (1800 seconds).
+
+This is classed as **"annoying"** on the pyramid of pain. This is because the attacker will have to change the communication protocol in the malware which will take some time to test and reconfigure for an attack.
 
 
 
