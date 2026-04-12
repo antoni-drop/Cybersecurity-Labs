@@ -22,7 +22,7 @@
 * 🎣 [**Phishing Analysis: The Greenholt Phish & Snapped Phishing Line**](./Technical-Labs/Phishing-Analysis.md)  
   *Investigating malicious emails and header artifacts.*
 * 🚩 [**Incident Response: Summit & Eviction**](./Technical-Labs/Incident-Response.md)  
-  *Pyramid Of Pain and the Cyber Kill Chain.*
+  *MITRE ATT&CK , Cyber Kill Chain and Pyramid Of Pain*
 * 🥒 [**Pickle Rick CTF**](./Technical-Labs/Pickle-Rick.md)  
   *A full-chain exploitation lab: Enumeration to Root access.*
 * 🔓 [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
