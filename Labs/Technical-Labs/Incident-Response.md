@@ -140,9 +140,38 @@ By blocking the attackers **data staging** process, I prevented the attacker fro
 
 # Lab 2 : Eviction
 
+This lab is focused on the **Cyber Kill Chain** mapping threat intelligence to the **MITRE ATT&CK** framework. The link to the **ATT&CK Navigator** is provided below:
 
+https://static-labs.tryhackme.cloud/sites/eviction/
 
+> Methodology : I also used AI assisted analysis here to help me map the complex TTP's to the adversary group as I understand that using AI is common in the SOC workflow. The lab itself was just finding the different techniques listed in the framework to answer questions but i've done my best to try understand the whole process and the "why" behind it to make it a bit more of an advanced writeup.
+> 
+## Scenario
 
+E-Corp is a company that manufactures rare earth metals for government and non-government clients. Sunny, an SOC analyst in the company received an intelligence report that informs her about an attacker group **APT28** might be trying to attack organisations similar to E-Corp. For this task I need to act on this intelligence identifying the groups "digital fingerprints" using the **MITRE ATT%CK** framework to see if they have been successful in breaching E-Corp's manufacturing data.
+
+> **NOTE** : in a real world scenario this would be called a **Threat-Informed Defence** where companies look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
+
+## APT28 Adversary Playbook
+
+Based on the **ATT&CK NAVIGATOR** analysis for APT28, I mapped the likely path they would use to go through E-Corp's network so protective measures are in place before waiting for an alert.
+
+1 - **Reconnaissance and initial access**
+
+- **Spearphishing Link (T1566.002)** : The adversary group used a **Spearphishing Link** to gain a foothold in the network and perform reconnaissance.
+- **Email Accounts (T1586.002)** : Developing their resources, the attacker compromises email accounts to create a level of trust while sending these links. 
+
+2 - **Execution and Persistence**
+
+- **Malicious File (T1204.002) & Malicious Link (T1204.001)** : These two methods are what makes the attack change from a "threat" into an "incident" if a user is tricked by these compromised emails to click one of these links.
+- **PowerShell (T1059.001) & Windows Command Shell (T1059.003)** : APT's use this as PowerShell and CMD are already installed on every windows machine. This is because rather than bringing in their own tools which an antivirus might catch, they use the computers to do their dirty work on their own system to gain access. This is known as "living off the land".
+- **Registry Run Keys / Startup Folder (T1547.001)** : This is how the attacker made sure they don't get kicked out. By changing the windows registry run keys they can force the malware to start up automatically whenever the computer is turned on or a user logs in. Monitoring these keys should be a top priority as this is a pernament "backdoor" within the system.
+
+3 - **Defense Evasion and Discovery**
+
+- **Rundll32** : This system binary is a normal part of windows so the APT is using it to run their malicious code while making it look like it is a standard background process. It keeps the code disguised and trusted in the system.
+- **Network Sniffing (T1040)** : The APT used the **Responder** tool within the system capturing usernames and hashed passwords that allowed access to legitimate credentials. The attacker is "eavesdropping" on the network traffic within the system.
+  
 
 
 ---
