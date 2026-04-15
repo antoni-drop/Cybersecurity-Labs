@@ -15,7 +15,8 @@ For the command I used the following flags:
 - **-sC** to run default **nmap** scripts that check for common vulnerabilities.
 - **-oA** to save all the results into three different file types (normal, grepable, XML) to make it easier to search through data later if needs be. It is also good for future-proofing my work if I accidentally close the terminal.
 
-> **NOTE** : I understand that for this CTF, saving the output may not have been necessary but I know it is good practice to do so.
+>[!NOTE]
+>I understand that for this CTF, saving the output may not have been necessary but I know it is good practice to do so.
 
 <img width="740" height="111" alt="image" src="https://github.com/user-attachments/assets/3b4b5dca-e474-4fcf-8056-36ecdada91c0" />
 
@@ -42,7 +43,8 @@ The flags I used are:
 - **-w** to specify the wordlist to be used in the scan. I used **directory-list-2.3-medium.txt** as it contains common directory names used in web environments.
 - **-x** tells the tool to check for each word in the list as a folder and a specific file type.
 
-> **NOTE** : I specified **php** as an extension as this website runs on a Linux server and php is the language it uses. I also chose **txt** because there may be hidden information in those files and **html** because it allows the discovery of other pages.
+>[!NOTE]
+>I specified **php** as an extension as this website runs on a Linux server and php is the language it uses. I also chose **txt** because there may be hidden information in those files and **html** because it allows the discovery of other pages.
 
 These were the results: 
 
