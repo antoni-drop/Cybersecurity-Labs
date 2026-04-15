@@ -11,7 +11,8 @@ During this lab I learned how a single character (an exclamation point) turns a 
 
 As Microsoft states: **"A moniker in COM is not only a way to identify an object—a moniker is also implemented as an object. This object provides services allowing a component to obtain a pointer to the object identified by the moniker. This process is referred to as binding."**  
 
-> **Note:** **COM** stands for **Component Object Model**. It is the language that Microsoft uses to let other software components talk to each other.
+> [!NOTE]
+> **COM** stands for **Component Object Model**. It is the language that Microsoft uses to let other software components talk to each other.
 
 In my own words, a **Moniker** is a **"Smart-Link"**. While a standard link just points to a file, a Moniker Link identifies that file as well as carrying instructions on how that file should be opened or **"Bound"**. Binding is essentially the handshake. The computer isn't just looking at the link but actually opens a live connection to that file.
 In relation to this exploit the **"!"** symbol triggers the **"binding process"**. This causes Outlook's usual security process to skip completely letting me force a connection with the user and jump to connecting them to my malicious server. 
@@ -23,8 +24,8 @@ The goal in this exploit is to bypass Outlook's "Protected View" which will look
 
 <img width="429" height="272" alt="Screenshot 2026-04-02 192038" src="https://github.com/user-attachments/assets/088d6790-da77-4bc7-90b1-2299ab25df2f" />
 
-
->**NOTE:** Screenshots used in this writeup are from the THM room that I learned this exploit from.
+>[!NOTE]
+>Screenshots used in this writeup are from the THM room that I learned this exploit from.
 
 
 Protected View is a "read only sandbox mode". It acts as a security boundary that opens suspicious files in a restricted environment limiting the files access to the rest of the system. Preventing malicious links, scripts and macros from running unless the user trusts the document.
