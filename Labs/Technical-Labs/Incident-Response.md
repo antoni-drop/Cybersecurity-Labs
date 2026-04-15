@@ -36,7 +36,8 @@ Moving up the pyramid, **IP addresses** are next. As the attacker probably modif
 
 <img width="760" height="336" alt="image" src="https://github.com/user-attachments/assets/f7fbbee8-8550-4964-95f7-e4ad257b7827" />
 
->  **NOTE** : "Egress" means traffic coming out.
+> [!NOTE]
+> "Egress" means traffic coming out.
 
 Since the malware is on the local machine, I need to block any traffic coming out to the attackers **C2 (Command and Control)** server.
 
@@ -44,7 +45,8 @@ Blocking IPs is also an **easy** bypass for an attacker as all they have to do i
 
 In this case, the tester signed up to a cloud service provider giving them a large pool of IP addresses to use as proxies.
 
-> **NOTE** : Proxies are the "middlemen" for internet traffic. Requests go through them rather than straight to the website or server on your behalf. Attackers use this as this keeps them hidden.
+>[!NOTE]
+>Proxies are the "middlemen" for internet traffic. Requests go through them rather than straight to the website or server on your behalf. Attackers use this as this keeps them hidden.
 
 ---
 
@@ -58,7 +60,8 @@ Blocking a domain is classed as **"simple"** to change for an attacker on the py
 
 Unlike a free IP change using a VPN, you have to buy a new domain but many registrars offer domains for very cheap so the financial pain is minimal for the attacker. A sophisticated attacker would more than likely have more than one domain to work with. However if the attacker has one domain, it does slow them down as getting a new domain isn't as quick and changing your IP because of **DNS Propogation**. This creates a window of opportunity for the defence team giving critical time to isolate and remediate infected systems.
 
-> **NOTE** : **DNS Propogation** is the **"lag time"** that servers around the world register that your website domain has changed. The internet basically has to update its **"phone book"**.
+>[!NOTE]
+>**DNS Propogation** is the **"lag time"** that servers around the world register that your website domain has changed. The internet basically has to update its **"phone book"**.
 
 ---
 
@@ -107,7 +110,8 @@ For the final sample I was given a command log where I was able to identify the 
 
 <img width="449" height="246" alt="image" src="https://github.com/user-attachments/assets/22282bce-e31b-45e7-8a57-819260417267" />
 
-> **NOTE**: I copy and pasted the logs into AI to give me an analysis of the commands as at the time I didn't completely understand every single log in the file. 
+>[!NOTE]
+>I copy and pasted the logs into AI to give me an analysis of the commands as at the time I didn't completely understand every single log in the file. 
 
 I noticed the attacker was piping outputs to a hidden file named **exfiltr8.log** in the **%temp%** folder preparing it for theft.
 
@@ -150,7 +154,8 @@ https://static-labs.tryhackme.cloud/sites/eviction/
 
 E-Corp is a company that manufactures rare earth metals for government and non-government clients. Sunny, an SOC analyst in the company received an intelligence report that informs her about an attacker group **APT28** might be trying to attack organisations similar to E-Corp. For this task I need to act on this intelligence identifying the groups "digital fingerprints" using the **MITRE ATT&CK** framework to see if they have been successful in breaching E-Corp's manufacturing data.
 
-> **NOTE** : in a real world scenario this would be called a **Threat-Informed Defence** where company's look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
+>[!NOTE]
+>In a real world scenario this would be called a **Threat-Informed Defence** where company's look for what current adversary groups are up to before an attack takes place. Making their company a less attractive target.
 
 ---
 ## ⛓️ The Cyber Kill Chain
