@@ -68,5 +68,5 @@ While this is primarily a personal learning portfolio, I welcome:
 - **Email**: dropantoni@gmail.com
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antoni-drop-9195bb3ba/)
 
-**Last Updated**: 2026-03-23 20:09:07  
+**Last Updated**: 15/04/2026   
 **Status**: 🟨 Active Learning | 📈 Expanding Labs and Projects
