@@ -113,13 +113,17 @@ To get my final flag I checked the root directory, to view it I needed to use th
 
 <img width="86" height="56" alt="image" src="https://github.com/user-attachments/assets/45a026aa-fe29-47df-809b-9edfaa0f085c" />
 
-Using the command **sudo less /root/3rd.txt** I got my final flag!
+Using the command **sudo less /root/3rd.txt** I got my third and final flag!
 
 <img width="239" height="39" alt="image" src="https://github.com/user-attachments/assets/311bf451-d3a6-4c18-8c80-ec2f2f0167e8" />
 
 ## Conclusion
 
+This CTF was my first exercise on completing a full attack lifecycle where I was able to eventually gain root access: 
 
+- **Leaked information** : Viewing the page source to find hidden credentials and the robots.txt file to find sensitive information.
+- **Bypassing Blacklists** : Finding an alternative command to view files when **cat** was blocked.
+- **Privelege Escalation** : Exploiting the misconfiguration of **sudo** priveleges to be able to view the information I needed in the command panel.
 
 
 
