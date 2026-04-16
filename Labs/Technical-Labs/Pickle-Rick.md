@@ -13,20 +13,20 @@ For the command I used the following flags:
 
 - **-sV** to determine what software and version the target IP is running.
 - **-sC** to run default **nmap** scripts that check for common vulnerabilities.
-- **-oA** to save all the results into three different file types (normal, grepable, XML) to make it easier to search through data later if needs be. It is also good for future-proofing my work if I accidentally close the terminal.
+- **-oA** to save all the results into three different file types (normal, grepable, XML) to make it easier to search through data later if needed. It is also good for future-proofing my work if I accidentally close the terminal.
 
 >[!NOTE]
 >I understand that for this CTF, saving the output may not have been necessary but I know it is good practice to do so.
 
 <img width="740" height="111" alt="image" src="https://github.com/user-attachments/assets/3b4b5dca-e474-4fcf-8056-36ecdada91c0" />
 
-My focus was **port 80** as it is hosting a web service and it is my entry point for potential exploitation. **Port 22** is **ssh** so it would be difficult to do anything with it as it is built to be secure making it harder to exploit. The version results also confirm this.
+My focus was **port 80** as it is hosting a web service and it is my entry point for potential exploitation. **Port 22** is **ssh** so it would be difficult to do anything with it as it is built to be secure making it harder to exploit. The version results confirm this.
 
 ---
 
 ## 🚪 Directory Brute-Forcing
 
-Moving onto the web server, I didn't find anything significant on the page itself so I viewed the page source and found this written in HTML code: 
+Moving onto the web server, I did not find anything significant on the page itself so I viewed the page source and found this written in HTML code: 
 
 <img width="296" height="76" alt="image" src="https://github.com/user-attachments/assets/43885af7-4a94-44dc-93e3-f2dec1a800cc" />
 
@@ -66,7 +66,7 @@ Obviously, this is a Rick and Morty reference and my first thought was that this
 
 <img width="379" height="547" alt="image" src="https://github.com/user-attachments/assets/efc0a831-c17c-4cb0-a1d0-226adff306df" />
 
-I tried the username and password and my intuition was correct. After logging in I was redirected to a "Rick Portal" containing a commmand panel and different page elements: 
+I tried the username and password and my intuition was correct. After logging in I was redirected to a "Rick Portal" containing a command panel and different page elements: 
 
 <img width="672" height="267" alt="image" src="https://github.com/user-attachments/assets/83e78dda-8a6c-43d5-a72f-ecf161f6ea8e" />
 
@@ -94,7 +94,7 @@ Moving on I viewed the clue.txt file:
 
 <img width="440" height="41" alt="image" src="https://github.com/user-attachments/assets/284f7b1e-b193-4452-951e-0adee85138f9" />
 
-I checked who I am on the system using the **whoami** command and used the **sudo -l** command to list my current priveleges and noticed that there is no password set to use sudo:
+I checked who I am on the system using the **whoami** command and used the **sudo -l** command to list my current privileges and noticed that there is no password set to use sudo:
 
 <img width="931" height="113" alt="image" src="https://github.com/user-attachments/assets/69590f90-f452-4b53-bad9-77c7cdc5c04b" />
 
@@ -107,9 +107,9 @@ Using the **ls /home/rick** command I found a file named **"second ingredients"*
 <img width="116" height="39" alt="image" src="https://github.com/user-attachments/assets/499581ba-03ab-40e8-bb70-9de7747b10a3" />
 
 >[!NOTE]
->I was stuck here for 15 minutes figuring out why I couldn't view the **"second ingredients"** file. Until I realised to view it I needed to use speechmarks as there is a space between the words.
+>I was stuck here for 15 minutes figuring out why I couldn't view the **"second ingredients"** file. Until I realised to view it I needed to use quotation marks as there is a space between the words.
 
-To get my final flag I checked the root directory, to view it I needed to use the **sudo ls /root** command as I needed super user priveleges this time however this wasn't an issue as there was no password set to use sudo:
+To get my final flag I checked the root directory, to view it I needed to use the **sudo ls /root** command as I needed super user privileges this time however this wasn't an issue as there was no password set to use sudo:
 
 <img width="86" height="56" alt="image" src="https://github.com/user-attachments/assets/45a026aa-fe29-47df-809b-9edfaa0f085c" />
 
@@ -121,9 +121,10 @@ Using the command **sudo less /root/3rd.txt** I got my third and final flag!
 
 This CTF was my first exercise on completing a full attack lifecycle where I was able to eventually gain root access: 
 
-- **Leaked information** : Viewing the page source to find hidden credentials and the robots.txt file to find sensitive information.
-- **Bypassing Blacklists** : Finding an alternative command to view files when **cat** was blocked.
-- **Privelege Escalation** : Exploiting the misconfiguration of **sudo** priveleges to be able to view the information I needed in the command panel.
+- **Leaked information** : Viewing the page source to find hidden credentials and the robots.txt file to find sensitive information. It shows how one piece of information could lead to a total breach of a web application.
+- **Bypassing Blacklists** : Finding an alternative command to view files when **cat** was blocked. This made me think outside the box and stick to the method rather than looking for a new one.
+- **Privilege Escalation** : Exploiting the misconfiguration of **sudo** privileges to be able to view the information I needed in the command panel. With the sudoers file not being configured properly, it allowed me to gain root access over the whole system.
+- **Principle of Least Privilege** : Doing this writeup made me realise why this is so important, if the users were given minimal access to be able to do their job then there would have been a lot less options to exploit the web server.
 
 
 
