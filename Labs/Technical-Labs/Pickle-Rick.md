@@ -34,7 +34,9 @@ Noting this down, my next step was to search for hidden directories. Seeing user
 
 My method of doing this was using the **gobuster** tool:
 
-<img width="1282" height="22" alt="image" src="https://github.com/user-attachments/assets/93637010-b4c6-4151-9e3f-2559ae93104b" />
+
+<img width="1408" height="27" alt="image" src="https://github.com/user-attachments/assets/327b4a36-e0ee-4abf-9055-6fe850c651d1" />
+
 
 The flags I used are:
 
@@ -50,20 +52,41 @@ These were the results:
 
 <img width="431" height="189" alt="image" src="https://github.com/user-attachments/assets/fd068864-b3a9-458c-8dc1-c0edf4fa1cb3" />
 
+- **Status 200 (OK)** the request was successful and I have full permission to view the content.
+- **Status 302 (Found/Redirect)** the source exists but it has been temporarily moved to another URL (for example, an admin page that exists but you don't have the login so it redirects you to the login page.) 
+- **Status 403 (Forbidden)** the resource exists but the server is blocking my access.
 
+### Exploitation and Post-Exploitation Enumeration
 
+I chose to look inside the /robots.txt file first as this is a high priority file to inspect as it often reveals sensitive directories and information the web developer is trying to hide. In the file I found a single word:
 
+<img width="134" height="41" alt="image" src="https://github.com/user-attachments/assets/b1a0f9c6-5bfc-4b5f-8afd-99ae9e6f30ec" />
 
+Obviously, this is a Rick and Morty reference and my first thought was that this could be the password that belongs to the username that I got from the page source. I decided to visit /login.php and I found the login page: 
 
+<img width="379" height="547" alt="image" src="https://github.com/user-attachments/assets/efc0a831-c17c-4cb0-a1d0-226adff306df" />
 
+I tried the username and password and my intuition was correct. After logging in I was redirected to a "Rick Portal" containing a commmand panel and different page elements: 
 
+<img width="672" height="267" alt="image" src="https://github.com/user-attachments/assets/83e78dda-8a6c-43d5-a72f-ecf161f6ea8e" />
 
+The only page element I had access to was the command panel. When I tried to access the other elements I was given this:
 
+<img width="623" height="370" alt="image" src="https://github.com/user-attachments/assets/4184439c-e73a-4b79-b4c2-ac8998d789f5" />
 
+This shows that the developer has put security measures in place so my next option from here was to use the command panel to try find more information. After using the **ls** command I found a list of different files:
 
+<img width="236" height="170" alt="image" src="https://github.com/user-attachments/assets/304f5dbb-b343-4389-b9c9-6009896a31b8" />
 
+I tried viewing the files using the **cat** command but I came across an obsticle as it was disabled which shows there must be a command blacklist:
 
+<img width="461" height="194" alt="image" src="https://github.com/user-attachments/assets/97a7ae5f-11f5-45a7-a3d3-e550485df32d" />
 
+This was the part of the CTF where I was stuck for a while as I couldn't find a way to view the files until I found the **less** command. 
+
+<img width="230" height="31" alt="image" src="https://github.com/user-attachments/assets/b03ae6c4-6d2e-4032-9b92-aa5bca0df92a" />
+
+Since this command wasn't blacklisted, I managed to view the file and find my first flag whcih was **"mr . meeseek hair"**. To find m
 
 
 
