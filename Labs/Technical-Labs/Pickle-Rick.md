@@ -124,7 +124,7 @@ This CTF was my first exercise on completing a full attack lifecycle where I was
 - **Leaked information** : Viewing the page source to find hidden credentials and the robots.txt file to find sensitive information. It shows how one piece of information could lead to a total breach of a web application.
 - **Bypassing Blacklists** : Finding an alternative command to view files when **cat** was blocked. This made me think outside the box and stick to the method rather than looking for a new one.
 - **Privilege Escalation** : Exploiting the misconfiguration of **sudo** privileges to be able to view the information I needed in the command panel. With the sudoers file not being configured properly, it allowed me to gain root access over the whole system.
-- **Principle of Least Privilege** : Doing this writeup made me realise why this is so important, if the users were given minimal access to be able to do their job then there would have been a lot less options to exploit the web server.
+- **Principle of Least Privilege** : Doing this writeup made me realise why this is so important, if the users were given minimal access then there would have been a lot less options to exploit the web server.
 
 
 
