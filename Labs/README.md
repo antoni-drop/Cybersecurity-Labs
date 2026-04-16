@@ -25,8 +25,6 @@
   *MITRE ATT&CK , Cyber Kill Chain, and Pyramid Of Pain.*
 * 🥒 [**Pickle Rick CTF**](./Technical-Labs/Pickle-Rick.md)  
   *A full-chain exploitation lab: Enumeration to Root access. Use of nmap and gobuster.*
-* 🔓 [**Password Cracking (John the Ripper)**](./Technical-Labs/Password-Cracking.md)  
-  *Practical recovery of credentials from various hash types.*
 
 ---
 
