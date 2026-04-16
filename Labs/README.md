@@ -29,7 +29,7 @@
 ---
 
 ## 📚 Knowledge Base
-*This serves as my technical references for my workflow, this is not a wikipedia page.*
+*This serves as my technical references as I develop foundational skills in cybersecurity, this is not a wikipedia page.*
 
 * 🔍 [**Networking**](./Knowledge-Base/Networking.md)  
   *OSI Model, TCP/UDP headers, and Wireshark basics.*
