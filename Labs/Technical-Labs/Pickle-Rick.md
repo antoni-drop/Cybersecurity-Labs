@@ -2,7 +2,7 @@
 
 ### This writeup documents my thought process on my successful exploitation of a web server in order to get the "secret ingredients" required to make a potion. The goal was to gain root access to achieve full system compromise.
 
-## Enumeration 
+## 🔍 Enumeration 
 
 To begin the enumeration phase, I did an **nmap** scan to check for open ports and running server versions:
 
@@ -24,7 +24,7 @@ My focus was **port 80** as it is hosting a web service and it is my entry point
 
 ---
 
-## Directory Brute-Forcing
+## 🚪 Directory Brute-Forcing
 
 Moving onto the web server, I didn't find anything significant on the page itself so I viewed the page source and found this written in HTML code: 
 
@@ -56,13 +56,13 @@ These were the results:
 - **Status 302 (Found/Redirect)** the source exists but it has been temporarily moved to another URL (for example, an admin page that exists but you don't have the login so it redirects you to the login page.) 
 - **Status 403 (Forbidden)** the resource exists but the server is blocking my access.
 
-### Exploitation and Post-Exploitation Enumeration
+## 🚩 Exploitation and Post-Exploitation Enumeration
 
-I chose to look inside the /robots.txt file first as this is a high priority file to inspect as it often reveals sensitive directories and information the web developer is trying to hide. In the file I found a single word:
+I chose to look inside the **/robots.txt** file first as this is a high priority file to inspect as it often reveals sensitive directories and information the web developer is trying to hide. In the file I found a single word:
 
 <img width="134" height="41" alt="image" src="https://github.com/user-attachments/assets/b1a0f9c6-5bfc-4b5f-8afd-99ae9e6f30ec" />
 
-Obviously, this is a Rick and Morty reference and my first thought was that this could be the password that belongs to the username that I got from the page source. I decided to visit /login.php and I found the login page: 
+Obviously, this is a Rick and Morty reference and my first thought was that this could be the password that belongs to the username that I got from the page source. I decided to visit **/login.php** and I found the login page: 
 
 <img width="379" height="547" alt="image" src="https://github.com/user-attachments/assets/efc0a831-c17c-4cb0-a1d0-226adff306df" />
 
@@ -78,7 +78,7 @@ This shows that the developer has put security measures in place so my next opti
 
 <img width="236" height="170" alt="image" src="https://github.com/user-attachments/assets/304f5dbb-b343-4389-b9c9-6009896a31b8" />
 
-I tried viewing the files using the **cat** command but I came across an obsticle as it was disabled which shows there must be a command blacklist:
+I tried viewing the files using the **cat** command but I came across an obstacle as it was disabled which shows there must be a command blacklist:
 
 <img width="461" height="194" alt="image" src="https://github.com/user-attachments/assets/97a7ae5f-11f5-45a7-a3d3-e550485df32d" />
 
@@ -86,11 +86,38 @@ This was the part of the CTF where I was stuck for a while as I couldn't find a 
 
 <img width="230" height="31" alt="image" src="https://github.com/user-attachments/assets/b03ae6c4-6d2e-4032-9b92-aa5bca0df92a" />
 
-Since this command wasn't blacklisted, I managed to view the file and find my first flag whcih was **"mr . meeseek hair"**. To find m
+Since this command wasn't blacklisted, I managed to view the file and find my first flag: 
 
+<img width="152" height="36" alt="image" src="https://github.com/user-attachments/assets/a8ed6dd8-36cf-4eed-a9e4-89a2b6931e46" />
 
+Moving on I viewed the clue.txt file:
 
+<img width="440" height="41" alt="image" src="https://github.com/user-attachments/assets/284f7b1e-b193-4452-951e-0adee85138f9" />
 
+I checked who I am on the system using the **whoami** command and used the **sudo -l** command to list my current priveleges and noticed that there is no password set to use sudo:
+
+<img width="931" height="113" alt="image" src="https://github.com/user-attachments/assets/69590f90-f452-4b53-bad9-77c7cdc5c04b" />
+
+Checking the root directory using **ls /** I navigated to the **/home** directory to check what users were in the system: 
+
+<img width="81" height="53" alt="image" src="https://github.com/user-attachments/assets/c44b8738-e45e-4bf2-b6ee-604fe1c45720" />
+
+Using the **ls /home/rick** command I found a file named **"second ingredients"**. To view the contents of the file I used **less /home/rick/"second ingredients"** and got my second flag:
+
+<img width="116" height="39" alt="image" src="https://github.com/user-attachments/assets/499581ba-03ab-40e8-bb70-9de7747b10a3" />
+
+>[!NOTE]
+>I was stuck here for 15 minutes figuring out why I couldn't view the **"second ingredients"** file. Until I realised to view it I needed to use speechmarks as there is a space between the words.
+
+To get my final flag I checked the root directory, to view it I needed to use the **sudo ls /root** command as I needed super user priveleges this time however this wasn't an issue as there was no password set to use sudo:
+
+<img width="86" height="56" alt="image" src="https://github.com/user-attachments/assets/45a026aa-fe29-47df-809b-9edfaa0f085c" />
+
+Using the command **sudo less /root/3rd.txt** I got my final flag!
+
+<img width="239" height="39" alt="image" src="https://github.com/user-attachments/assets/311bf451-d3a6-4c18-8c80-ec2f2f0167e8" />
+
+## Conclusion
 
 
 
