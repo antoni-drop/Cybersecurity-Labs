@@ -1,6 +1,6 @@
 # 🔍 Networking
 
-### This file documents my understanding of how data moves, different protocols, and traffic behaviour. It is the notes I refer to when it comes to networking.
+### This file documents my understanding of how data moves, different protocols, and traffic behaviour. This is the notes I refer to when it comes to networking.
 
 ---
 
