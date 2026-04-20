@@ -44,10 +44,25 @@ Transmission Control Protocol must establish a reliable connection before any da
 
 ---
 
-### Traffic Anomalies
+### 🚨 Anomalies
 
+- **Stealth scan (SYN/RST)** : "Knock and run" tactic. The client starts a connection but kills it once the server responds with **SYN/ACK**. The client is trying to identify open ports without getting logged. This is what an **nmap stealth scan** (-sS) would use.
+- **Null scanning (No flags)** : TCP packet with no flags set, it is designed to bypass firewall and packet filters. If a port is closed it must respond with an **RST** packet, if it is open it will discard the packet. As this only works on Linux systems and not Windows, it is also used for **OS Fingerprinting**.
+- **Xmas scan (FIN/PSH/URG)** : This is a 100% indicator that this is a scan that is "illegal" since it never happens in legitimate traffic. This is used for **OS Fingerprinting**.
+- **Contradiction scan (SYN/FIN)** : This is a clear sign of a probe that attackers use to check if a firewall is properly configured or if they can bypass an **IDS (Intrusion Detection System)** that can't handle "garbage data". This works as it overwhelms the IDS making it let any traffic through as it needs to keep the network from crashing.
 
+---
 
+### 🚪 Common Ports & Services
+
+| Port | Service | My Analytical Focus |
+| :--- | :--- | :--- |
+| **21** | **FTP** | Look for clear-text credential sniffing or unauthorized file exfiltration. |
+| **22** | **SSH** | Monitor for high-frequency connection attempts (**Brute Force**). |
+| **53** | **DNS** | Check for unusually long queries or high volume (potential **DNS Tunneling**). |
+| **80 / 443** | **HTTP/S** | Inspect the payload for **SQL Injection**, **XSS**, or malicious web shells. |
+| **139 / 445** | **SMB** | Watch for internal file-share scanning—a key indicator of **Ransomware** spreading. |
+| **3389** | **RDP** | Identify unauthorised remote sessions or attempts to bypass GUI authentication. |
 
 
 
